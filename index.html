@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Collect.io</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+
+<div class="page">
+    <div class="m-header">
+        <img src="images/logo.png" alt="" class="m-header--logo">
+        <h1 class="m-header--name">
+            Collect.io
+        </h1>
+        <h2 class="m-header--baseline">
+            Your new bookmark manager
+        </h2>
+        <h3 class="m-header--subline">
+            Manage your inspiration and resources into collections.
+        </h3>
+    </div>
+
+    <div class="m-form">
+        <p class="m-form--title">
+            Get notified of the launch
+        </p>
+
+        <form id="form-subscribe">
+            <div class="m-form--email-container">
+                <input type="email" class="m-form--email-field" id="email" name="email">
+                <label for="email" class="m-form--email-label">Email address</label>
+                <button type="submit" class="m-form--submit">Subscribe</button>
+            </div>
+
+            <span class="m-form--message m-form--success">Got it! You will hear from us soon :)</span>
+            <span class="m-form--message m-form--error">Hmm... This email seems to be invalid</span>
+            <span class="m-form--message m-form--server-error">We've got a problem on the server... retry later :/</span>
+        </form>
+    </div>
+</div>
+
+<script src="js/min/main.min.js"></script>
+
+</body>
+</html>

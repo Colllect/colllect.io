@@ -1,0 +1,219 @@
+@import 'normalize';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Cocogoose';
+    src: url('../fonts/cocogoose.woff2') format('woff2'),
+         url('../fonts/cocogoose.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+$primary-color: #7b80de;
+$secondary-color: #ffffff;
+$subline-color: #8598a5;
+$background-color: #1d1f21;
+$success-color: #43b03b;
+$error-color: #d23636;
+$transition-duration: 150ms;
+
+body {
+    background: $background-color;
+    font-family: Roboto, sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background: url('../images/background.jpg') no-repeat top center;
+    background-size: 1370px 1062px;
+    padding-top: 180px;
+}
+
+.m-header {
+    text-align: center;
+}
+.m-header--logo {
+    width: 90px;
+    height: 111px;
+}
+.m-header--name,
+.m-header--baseline {
+    font-family: Cocogoose, sans-serif;
+    font-weight: normal;
+    padding: 0 20px;
+}
+.m-header--name {
+    color: $primary-color;
+    font-size: 14px;
+    margin: 50px 0 0;
+}
+.m-header--baseline {
+    color: $secondary-color;
+    font-size: 38px;
+    margin: 0;
+}
+.m-header--subline {
+    color: $subline-color;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 5px 0 0;
+    padding: 0 20px;
+}
+
+.m-form {
+    padding-top: 50px;
+    color: $secondary-color;
+}
+.m-form--title {
+    font-size: 22px;
+    text-align: center;
+    margin: 0 0 20px;
+}
+.m-form--email-container {
+    position: relative;
+    max-width: 80%;
+    width: 370px;
+    height: 50px;
+    margin: 0 auto 20px;
+
+    .m-form--email-field {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 12px 33px 16px;
+        border: 2px solid $primary-color;
+        border-radius: 50px;
+        background: none;
+        font-size: 16px;
+        color: $secondary-color;
+        transition: background-color $transition-duration;
+
+        &:not([disabled]):hover {
+            background: rgba($subline-color, 0.2);
+        }
+        &:not([disabled]):focus {
+            outline: none;
+            background: rgba($background-color, 0.3);
+        }
+        &:not([disabled]):focus + .m-form--email-label {
+            opacity: 0.5;
+        }
+        &.submitted {
+            text-align: center;
+        }
+        &.filled + .m-form--email-label {
+            opacity: 0 !important;
+        }
+        &.filled:valid ~ .m-form--submit {
+            background-color: $primary-color;
+
+            &:not([disabled]):hover,
+            &:not([disabled]):focus {
+                background-position: 23px center;
+            }
+        }
+    }
+    .m-form--email-label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        font-size: 16px;
+        padding: 14px 0 14px 35px;
+        pointer-events: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
+        transition: opacity $transition-duration;
+    }
+    .m-form--submit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 100%;
+        background: url('../images/submit.png') no-repeat 20px center;
+        background-size: 12px auto;
+        border: none;
+        text-indent: 200%;
+        overflow: hidden;
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        transition: background $transition-duration;
+
+        &:focus {
+            outline: none;
+        }
+        &[disabled] {
+            cursor: default;
+        }
+    }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+.m-form--message {
+    display: none;
+    text-align: center;
+    font-size: 16px;
+    animation: slideInMessage $transition-duration;
+
+    &.m-form--success {
+        color: $success-color;
+    }
+    &.m-form--error,
+    &.m-form--server-error {
+        color: $error-color;
+    }
+}
+
+@keyframes slideInMessage {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 760px) {
+    .page {
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 759px) {
+    .page {
+        background-size: 760px auto;
+        padding-top: 30px;
+        padding-bottom: 100px;
+    }
+    .m-header--name {
+        margin-top: 30px;
+    }
+    .m-header--baseline {
+        font-size: 30px;
+        line-height: 1.2;
+        padding: 15px 20px;
+    }
+    .m-form {
+        padding-top: 30px;
+    }
+}
