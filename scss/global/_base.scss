@@ -1,0 +1,11 @@
+html,
+body {
+    color: $shark;
+    background-color: $white;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
