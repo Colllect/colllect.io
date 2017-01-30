@@ -1,12 +1,24 @@
 /* Dependencies
    ========================================================================== */
-@import "~normalize.css/normalize.css";
+@import "../node_modules/normalize.css/normalize.css";
 
 /* Variables
    ========================================================================== */
-@import "variables";
+@import "variables/colors";
+@import "variables/fonts";
+@import "variables/sizes";
+@import "variables/mixins";
 
 /* Global
    ========================================================================== */
 @import "global/base";
 @import "global/fonts";
+@import "global/buttons";
+
+/* Modules
+   ========================================================================== */
+@import "modules/header";
+@import "modules/main";
+@import "modules/hero";
+@import "modules/inspiration";
+@import "modules/organize";

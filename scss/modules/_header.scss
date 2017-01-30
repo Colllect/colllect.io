@@ -1,0 +1,49 @@
+.m-header {
+    position: relative;
+    width: 100%;
+    padding: 30px 30px;
+
+    @include for-desktop-up {
+        padding: 50px 185px;
+    }
+}
+
+.m-header--logo {
+    position: relative;
+    width: 130px;
+    height: auto;
+}
+.m-header--logo-version {
+    position: absolute;
+    top: 5px;
+    left: 105%;
+    color: $chetwode-blue;
+    font-size: 13px;
+}
+
+@include for-phone-only {
+    .m-header--logbox {
+        display: none;
+    }
+}
+@include for-desktop-up {
+    .m-header--logbox {
+        position: absolute;
+        top: 50px;
+        right: 185px;
+    }
+    .m-header--logbox-button {
+        display: inline-block;
+        text-decoration: none;
+        color: $regent-gray;
+        border-radius: 20px;
+        font-size: 16px;
+        height: 35px;
+        line-height: 35px;
+        padding: 0 25px;
+    }
+    .m-header--logbox-button-highlight {
+        color: $white;
+        background-color: $chetwode-blue;
+    }
+}

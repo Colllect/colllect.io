@@ -1,0 +1,75 @@
+@include for-desktop-up {
+    .m-inspiration {
+        position: relative;
+        margin: 0 180px 580px 750px;
+    }
+    .m-inspiration--text-wrapper {
+        width: 400px;
+    }
+}
+
+.m-inspiration--elements-outer {
+    width: 100vw;
+    margin-left: -20px;
+    padding: 0 20px 20px;
+    overflow: auto;
+}
+@include for-phone-only {
+    .m-inspiration--elements {
+        display: flex;
+        width: calc(((65vw + 10px) * 4) + 10px);
+    }
+}
+
+.m-inspiration--element {
+    width: 65vw;
+    padding: 20px;
+    background-color: $white;
+    border-radius: 6px;
+    box-shadow: 0 12px 29px rgba($snuff, 0.8);
+    margin: 18px 10px 18px 0;
+
+    @include for-desktop-up {
+        position: absolute;
+        width: 234px;
+        margin: 18px 18px 18px 0;
+    }
+}
+.m-inspiration--element-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 7px;
+}
+.m-inspiration--element-name {
+    display: inline-block;
+    height: 32px;
+    font-family: $font-montserrat;
+    font-size: 14px;
+    line-height: 32px;
+    color: $chetwode-blue;
+    vertical-align: top;
+}
+.m-inspiration--element-description {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 5px 0 0;
+}
+
+@include for-desktop-up {
+    .m-inspiration--element-picture {
+        top: 300px;
+        left: -585px;
+    }
+    .m-inspiration--element-note {
+        top: 178px;
+        left: -335px;
+    }
+    .m-inspiration--element-link {
+        top: 445px;
+        left: -335px;
+    }
+    .m-inspiration--element-color {
+        top: 490px;
+        left: -85px;
+    }
+}

@@ -1,0 +1,31 @@
+.m-hero {
+    color: $white;
+    padding: 0 15px;
+
+    @include for-desktop-up {
+        width: 700px;
+        padding: 0 0 0 180px;
+    }
+}
+
+.m-hero--title {
+    font-family: $font-cocogoose;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 50px;
+
+    @include for-desktop-up {
+        font-size: 80px;
+        line-height: 112px;
+        margin: 100px 0 0;
+    }
+}
+.m-hero--subtitle {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 25px 0 30px;
+
+    @include for-desktop-up {
+        margin: 25px 0 40px;
+    }
+}

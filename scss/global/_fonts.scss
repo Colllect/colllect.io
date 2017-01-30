@@ -5,3 +5,19 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-bold.woff2') format('woff2'),
+    url('../fonts/montserrat-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/roboto-regular.woff2') format('woff2'),
+    url('../fonts/roboto-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

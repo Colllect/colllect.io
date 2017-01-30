@@ -1,0 +1,17 @@
+.button--give-a-try {
+    display: inline-block;
+    background-color: $violet-red;
+    color: $white;
+    padding: 18px 80px;
+    font-family: $font-montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    box-shadow: 0 0 87px rgba($violet-red, 0.75);
+
+    @include for-desktop-up {
+        font-size: 16px;
+        padding: 25px 80px;
+    }
+}

@@ -2,10 +2,47 @@ html,
 body {
     color: $shark;
     background-color: $white;
+    font-family: $font-roboto;
+}
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(-#{$body-background-height} + 300px);
+        left: calc(50% - #{$body-background-width / 2});
+        height: $body-background-height;
+        width: $body-background-width;
+        background: $shark;
+        transform-origin: bottom center;
+        transform: rotate(-30deg);
+        transition: all 300ms;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    @include for-desktop-up {
+        margin: 0 auto;
+        width: 1522px;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 875px);
+        }
+    }
 }
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+.page {
+    position: relative;
 }

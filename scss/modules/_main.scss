@@ -1,0 +1,57 @@
+.m-main--wrapper {
+    margin: 40px 20px 30px;
+
+    @include for-desktop-up {
+        margin: 0;
+    }
+}
+
+.m-main--subtitle {
+    color: $wewak;
+    font-family: $font-montserrat;
+    font-size: 13px;
+    line-height: 13px;
+    text-transform: uppercase;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 3px;
+        width: 16px;
+        margin-right: 7px;
+        background-color: $wewak;
+        border-radius: 2px;
+        transform: translateY(-3px);
+    }
+
+    @include for-desktop-up {
+        font-size: 16px;
+        line-height: 16px;
+
+        &::before {
+            width: 35px;
+            margin-right: 12px;
+            transform: translateY(-4px);
+        }
+    }
+}
+
+.m-main--title {
+    font-family: $font-cocogoose;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 40px;
+    margin: 20px 0 25px;
+
+    @include for-desktop-up {
+        font-size: 44px;
+        line-height: 58px;
+        margin: 20px 0 35px;
+    }
+}
+
+.m-main--text {
+    color: $regent-gray;
+    font-size: 16px;
+    line-height: 28px;
+}
