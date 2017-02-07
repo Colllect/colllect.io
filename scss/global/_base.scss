@@ -25,6 +25,7 @@ body {
         transition: all 300ms;
         pointer-events: none;
         user-select: none;
+        z-index: 1;
     }
 
     @include for-desktop-up {

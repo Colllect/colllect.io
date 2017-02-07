@@ -2,6 +2,7 @@
     position: relative;
     width: 100%;
     padding: 30px 30px;
+    z-index: 1;
 
     @include for-desktop-up {
         padding: 50px 185px;
