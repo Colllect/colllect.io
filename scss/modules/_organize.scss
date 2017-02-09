@@ -1,1 +1,101 @@
+.m-organise {
+    position: relative;
+    margin-bottom: 200px;
+}
 
+.m-organise--subtitle,
+.m-organise--title,
+.m-organise--text {
+    width: 400px;
+    margin-left: 185px;
+}
+
+.m-organise--organise-shape {
+    position: absolute;
+    top: 0;
+    right: 185px;
+    width: 670px;
+}
+
+.m-organise--menu {
+    position: relative;
+    margin: 50px 0 0 168px;
+}
+
+.m-organise--menu-item {
+    position: relative;
+    display: block;
+    width: 436px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 22px 0 22px 85px;
+    color: rgba($chetwode-blue, 0.4);
+    font-family: $font-roboto;
+    cursor: pointer;
+    transition: color 200ms;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+
+    strong {
+        display: block;
+        font-family: $font-montserrat;
+        color: $shark;
+        padding-bottom: 8px;
+    }
+}
+
+.m-organise--menu-item-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    border: 1px solid rgba($chetwode-blue, 0.4);
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+}
+.m-organise--menu-item-arrow-spike {
+    transform: translateX(-4px);
+    fill: $snuff;
+    transition: transform 200ms, fill 200ms;
+}
+.m-organise--menu-item-arrow-dash {
+    transform: translateX(-30px);
+    transition: transform 200ms;
+}
+.m-organise--menu-item {
+    &:hover {
+        .m-organise--menu-item-arrow-spike {
+            fill: $chetwode-blue;
+        }
+    }
+    &.m-organise--menu-item-active {
+        color: $chetwode-blue;
+
+        .m-organise--menu-item-arrow-spike {
+            transform: translateX(0);
+            fill: $chetwode-blue;
+        }
+        .m-organise--menu-item-arrow-dash {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.m-organise--menu-item-active-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 88px;
+    width: 436px;
+    box-shadow: 0 8px 29px rgba($chetwode-blue, 0.35);
+    pointer-events: none;
+    border-radius: $border-radius;
+    transition: top 150ms;
+}
