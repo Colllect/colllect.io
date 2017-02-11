@@ -92,10 +92,10 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 88px;
+    min-height: 88px;
     width: 436px;
     box-shadow: 0 8px 29px rgba($chetwode-blue, 0.35);
     pointer-events: none;
     border-radius: $border-radius;
-    transition: top 150ms;
+    transition: top 150ms, bottom 150ms;
 }
