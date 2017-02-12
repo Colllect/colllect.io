@@ -6,6 +6,7 @@ function each (domElementList, callback) {
 
 var activeItemClass = 'm-organise--menu-item-active';
 var activeMenuItem = document.querySelector('.' + activeItemClass);
+var organiseShape = document.querySelector('.m-organise--shape');
 var activeMenuBackground = document.querySelector('.m-organise--menu-item-active-background');
 var organiseMenuItems = document.querySelectorAll('.m-organise--menu-item');
 
@@ -23,5 +24,6 @@ each(organiseMenuItems, function (item) {
     });
 
     currentItem.classList.add(activeItemClass);
+    organiseShape.dataset.stateName = currentItem.dataset.stateName;
   })
 });

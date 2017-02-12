@@ -12,6 +12,7 @@
     font-size: 13px;
     line-height: 13px;
     text-transform: uppercase;
+    margin-bottom: 0;
 
     &::before {
         content: "";
@@ -41,12 +42,12 @@
     font-size: 28px;
     font-weight: normal;
     line-height: 40px;
-    margin: 20px 0 25px;
+    margin: 10px 0 25px;
 
     @include for-desktop-up {
         font-size: 44px;
         line-height: 58px;
-        margin: 20px 0 30px;
+        margin: 10px 0 30px;
     }
 }
 

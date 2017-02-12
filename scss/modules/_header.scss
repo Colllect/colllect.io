@@ -13,6 +13,10 @@
     position: relative;
     width: 130px;
     height: auto;
+
+    img {
+        width: 100%;
+    }
 }
 .m-header--logo-version {
     position: absolute;

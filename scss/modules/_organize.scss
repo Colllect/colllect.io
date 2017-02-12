@@ -1,6 +1,6 @@
 .m-organise {
     position: relative;
-    margin-bottom: 200px;
+    margin: -60px 0 200px;
 }
 
 .m-organise--subtitle,
@@ -8,13 +8,6 @@
 .m-organise--text {
     width: 400px;
     margin-left: 185px;
-}
-
-.m-organise--organise-shape {
-    position: absolute;
-    top: 0;
-    right: 185px;
-    width: 670px;
 }
 
 .m-organise--menu {
@@ -59,15 +52,18 @@
     border-radius: 100%;
     transform: translate(-50%, -50%);
 }
+
 .m-organise--menu-item-arrow-spike {
     transform: translateX(-4px);
     fill: $snuff;
     transition: transform 200ms, fill 200ms;
 }
+
 .m-organise--menu-item-arrow-dash {
     transform: translateX(-30px);
     transition: transform 200ms;
 }
+
 .m-organise--menu-item {
     &:hover {
         .m-organise--menu-item-arrow-spike {
@@ -98,4 +94,201 @@
     pointer-events: none;
     border-radius: $border-radius;
     transition: top 150ms, bottom 150ms;
+}
+
+.m-organise--shape {
+    position: absolute;
+    top: -82px;
+    right: 5px;
+    width: 1000px;
+}
+
+.m-organise--shape-select-tag {
+    transform-origin: center center;
+    transform: translate(-12px, -54px) scale(0.2, 0.2);
+    opacity: 0;
+    transition: transform 300ms, opacity 300ms;
+}
+
+.m-organise--shape-element {
+    transition: opacity 300ms, transform 300ms;
+}
+
+.m-organise--shape-element-empty {
+    transform: translate(0, 20px);
+}
+
+.m-organise--shape-stack,
+.m-organise--shape-collection {
+    transition: opacity 300ms, transform 300ms;
+}
+
+.m-organise--shape-stack,
+.m-organise--shape-collection {
+    opacity: 0;
+    transform: translate(0, 50px);
+}
+
+.m-organise--shape-element-player,
+.m-organise--shape-element-notification {
+    .m-organise--shape-collection {
+        transform: translate(0, 100px);
+    }
+}
+
+.m-organise--shape[data-state-name="tag-manager"],
+.m-organise--shape[data-state-name="multiple-selection"] {
+    .m-organise--shape-element-player {
+        transform: translate(0, -60px);
+    }
+
+    .m-organise--shape-element-tchat {
+        transform: translate(0, -120px);
+    }
+
+    .m-organise--shape-element-notification {
+        transform: translate(0, -60px);
+    }
+
+    .m-organise--shape-element-empty {
+        transform: translate(0, -60px);
+    }
+}
+
+.m-organise--shape-element-multiple-stroke {
+    stroke: transparent;
+    stroke-width: 0;
+    transition: stroke 150ms, stroke-width 150ms;
+}
+
+.m-organise--shape[data-state-name="tag-manager"] {
+    .m-organise--shape-select-tag {
+        transform: translate(-12px, -54px) scale(1, 1);
+        opacity: 1;
+    }
+
+    .m-organise--shape-element {
+        opacity: 0.4;
+    }
+
+    .m-organise--shape-element-player {
+        opacity: 1;
+    }
+}
+
+.m-organise--shape[data-state-name="multiple-selection"] {
+    .m-organise--shape-element {
+        opacity: 0.4;
+    }
+
+    .m-organise--shape-element-multiple-stroke {
+        stroke: $wewak;
+        stroke-width: 4px;
+    }
+
+    .m-organise--shape-element-player,
+    .m-organise--shape-element-notification,
+    .m-organise--shape-element-tchat {
+        opacity: 1;
+    }
+
+    .m-organise--shape-element-player {
+        .m-organise--shape-element-multiple-stroke {
+            animation: selectPlayerStroke 0.75s;
+        }
+    }
+
+    .m-organise--shape-element-notification {
+        animation: selectNotificationOpacity 0.75s;
+
+        .m-organise--shape-element-multiple-stroke {
+            animation: selectNotificationStroke 0.75s;
+        }
+    }
+
+    .m-organise--shape-element-tchat {
+        animation: selectTchatOpacity 0.75s;
+
+        .m-organise--shape-element-multiple-stroke {
+            animation: selectTchatStroke 0.75s;
+        }
+    }
+
+    @keyframes selectNotificationOpacity {
+        0%,
+        50% {
+            opacity: 0.4;
+        }
+        75%,
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes selectTchatOpacity {
+        0%,
+        75% {
+            opacity: 0.4;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes selectPlayerStroke {
+        0%,
+        25% {
+            stroke: transparent;
+            stroke-width: 0;
+        }
+        50%,
+        100% {
+            stroke: $wewak;
+            stroke-width: 4px;
+        }
+    }
+
+    @keyframes selectNotificationStroke {
+        0%,
+        50% {
+            stroke: transparent;
+            stroke-width: 0;
+        }
+        75%,
+        100% {
+            stroke: $wewak;
+            stroke-width: 4px;
+        }
+    }
+
+    @keyframes selectTchatStroke {
+        0%,
+        75% {
+            stroke: transparent;
+            stroke-width: 0;
+        }
+        100% {
+            stroke: $wewak;
+            stroke-width: 4px;
+        }
+    }
+}
+
+.m-organise--shape[data-state-name="collections"] {
+    .m-organise--shape-element {
+        opacity: 0.4;
+    }
+
+    .m-organise--shape-element-text,
+    .m-organise--shape-element-player,
+    .m-organise--shape-element-tchat,
+    .m-organise--shape-element-notification {
+        opacity: 1;
+    }
+
+    .m-organise--shape-stack,
+    .m-organise--shape-collection {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
 }
