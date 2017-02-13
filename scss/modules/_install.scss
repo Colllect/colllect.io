@@ -1,0 +1,122 @@
+.m-install--shape-under {
+    position: absolute;
+    margin-top: 10%;
+    left: -10%;
+    width: 50%;
+}
+
+.m-install--ui {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 40px 270px 0;
+    width: 1522px;
+
+    img {
+        width: 100%;
+        box-shadow: 0 5px 29px rgba($shark, 0.25);
+    }
+}
+
+.m-install--background-wrapper {
+    margin-top: 200px;
+}
+
+.m-install--background-inner {
+    position: relative;
+    padding-top: 1px;
+}
+
+$footer-height: 1000px;
+.m-install--background-shapes {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    height: calc(24vw + #{$footer-height});
+}
+
+.m-install--background-shape-left {
+    position: absolute;
+    left: 0;
+    bottom: #{-3450px + $footer-height};
+    width: 1847px;
+}
+
+.m-install--background-shape-right {
+    position: absolute;
+    right: 0;
+    bottom: #{-1220px + $footer-height};
+    width: 1317px;
+}
+
+.m-install--background-shape-left-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(50% + 400px);
+    height: 100%;
+    overflow: hidden;
+}
+
+.m-install--background-shape-right-mask {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: calc(50% - 400px);
+    height: 100%;
+    overflow: hidden;
+}
+
+.m-install {
+    position: absolute;
+    top: -120px;
+    right: 185px;
+    width: 400px;
+    text-align: center;
+}
+
+.m-install--icon {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 50px auto 25px;
+}
+.m-install--title {
+    display: block;
+    font-family: $font-montserrat;
+    font-size: 20px;
+    line-height: 24px;
+}
+.m-install--content {
+    color: $white;
+    line-height: 24px;
+    padding: 5px 60px 20px;
+}
+.m-install--button {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-family: $font-montserrat;
+    color: $shark;
+    background: $white;
+    width: 234px;
+    padding: 22px 0;
+    margin: 0 auto;
+    border-radius: 100px;
+    box-shadow: 0 10px 60px rgba($rhino, 0.5);
+}
+.m-install--arrow {
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    width: 10px;
+    opacity: 0.4;
+    transform: translate(0, -55%);
+}
+
+.m-install--hexagonal-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
