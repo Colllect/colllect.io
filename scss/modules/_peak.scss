@@ -1,0 +1,109 @@
+.m-peak {
+    position: relative;
+    margin: 100px 270px 0;
+    background: $shark;
+}
+
+.m-peak--title {
+    display: block;
+    font-family: $font-cocogoose;
+    font-size: 54px;
+    font-weight: normal;
+    text-align: center;
+    color: $white;
+}
+
+.m-peak--text {
+    color: $shuttle-gray;
+    max-width: 540px;
+    margin: 30px auto;
+    text-align: center;
+    line-height: 28px;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        border-bottom: 2px solid $chetwode-blue;
+        padding-bottom: 5px;
+        transition: color 150ms;
+
+        &:hover {
+            color: $chetwode-blue;
+        }
+    }
+}
+
+.m-peak--form {
+    display: flex;
+    margin: 70px 0;
+}
+
+.m-peak--form-input {
+    position: relative;
+    margin-right: 20px;
+    height: 60px;
+
+    input {
+        height: 100%;
+        width: 100%;
+        font-family: $font-montserrat;
+        color: $white;
+        background: $shark;
+        padding: 0 30px 0 70px;
+        border: 2px solid $abbey;
+        border-radius: 60px;
+
+        &.m-peak--form-input__filled,
+        &:focus {
+            border-color: $chetwode-blue;
+            outline: none;
+
+            & ~ label {
+                opacity: 0;
+            }
+
+            & ~ .m-peak--form-input-icon {
+                fill: $chetwode-blue;
+            }
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 0;
+        left: 70px;
+        line-height: 62px;
+        color: $white;
+        font-family: $font-montserrat;
+        font-size: 14px;
+        pointer-events: none;
+    }
+}
+
+.m-peak--form-input-icon {
+    position: absolute;
+    top: 25px;
+    left: 37px;
+    width: 18px;
+    fill: $abbey;
+}
+
+.m-peak--form-input-email {
+    width: 400px;
+}
+
+.m-peak--form-input-password {
+    width: 320px;
+}
+
+.m-peak--form-button {
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    padding: 20px 0;
+    width: 230px;
+
+    &:focus {
+        outline: none;
+    }
+}

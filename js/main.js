@@ -4,6 +4,8 @@ function each (domElementList, callback) {
   }
 }
 
+///////////
+// ORGANISE
 var activeItemClass = 'm-organise--menu-item-active';
 var activeMenuItem = document.querySelector('.' + activeItemClass);
 var organiseShape = document.querySelector('.m-organise--shape');
@@ -27,3 +29,23 @@ each(organiseMenuItems, function (item) {
     organiseShape.dataset.stateName = currentItem.dataset.stateName;
   })
 });
+
+//////////////
+// TAKE A PEAK
+var peakFormFields = document.querySelectorAll('.m-peak--form-input input');
+var focusedField = 'm-peak--form-input__filled';
+
+function manageInputStateChange () {
+  if (this.value.trim() !== "") {
+    if (!this.classList.contains(focusedField)) {
+      this.classList.add(focusedField);
+    }
+  } else {
+    this.classList.remove(focusedField);
+  }
+}
+
+each(peakFormFields, function (field) {
+  field.addEventListener('blur', manageInputStateChange);
+});
+
