@@ -6,6 +6,24 @@
     color: $shuttle-gray;
     background: $shark;
     line-height: 28px;
+
+    a {
+        color: $shuttle-gray;
+        text-decoration: none;
+        transition: color 150ms;
+
+        .m-footer--link-picto path {
+            transition: fill 150ms;
+        }
+
+        &:hover {
+            color: $white;
+
+            .m-footer--link-picto path {
+                fill: $white;
+            }
+        }
+    }
 }
 
 .m-footer--line {
@@ -62,6 +80,13 @@
     padding-bottom: 10px;
 }
 
+.m-footer--link-picto {
+    width: 20px;
+    height: 28px;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
 .m-footer--logo {
     width: 135px;
 }
@@ -70,8 +95,6 @@
     padding: 5px 0 0;
 
     a {
-        color: $shuttle-gray;
-        text-decoration: none;
         border-bottom: 1px solid transparent;
         transition: color 150ms, border-bottom-color 150ms;
 

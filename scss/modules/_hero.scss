@@ -57,9 +57,13 @@
     animation: heroTitleSlideIn 2s cubic-bezier(0, 0.69, 0.19, 1);
 }
 
+.m-hero--shapes {
+    position: relative;
+}
+
 .m-hero--shape-under {
     position: absolute;
-    top: 345px;
+    top: -400px;
     left: 920px;
     width: 900px;
     animation: shapeUnderSlideIn 1.2s cubic-bezier(0, 0.69, 0.19, 1);
