@@ -30,7 +30,21 @@ body {
 
     @include for-desktop-up {
         margin: 0 auto;
-        width: 1522px;
+        max-width: 1180px;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 680px);
+        }
+    }
+    @include for-mid-desktop-up {
+        max-width: 1380px;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 765px);
+        }
+    }
+    @include for-big-desktop-up {
+        max-width: 1522px;
 
         &::before {
             top: calc(-#{$body-background-height} + 875px);

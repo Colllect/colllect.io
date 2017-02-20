@@ -17,6 +17,18 @@
     line-height: 50px;
 
     @include for-desktop-up {
+        font-size: 60px;
+        line-height: 80px;
+        margin: 30px 0 0;
+    }
+
+    @include for-mid-desktop-up {
+        font-size: 70px;
+        line-height: 95px;
+        margin: 50px 0 0;
+    }
+
+    @include for-big-desktop-up {
         font-size: 80px;
         line-height: 112px;
         margin: 80px 0 0;
@@ -24,12 +36,17 @@
 }
 
 .m-hero--subtitle {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 25px;
     margin: 25px 0 30px;
     animation: heroSlideUp 1.85s cubic-bezier(0, 0.69, 0.19, 1);
 
     @include for-desktop-up {
+        margin: 20px 0 35px;
+    }
+
+    @include for-mid-desktop-up {
+        font-size: 16px;
         margin: 25px 0 40px;
     }
 }
@@ -63,17 +80,35 @@
 
 .m-hero--shape-under {
     position: absolute;
-    top: -400px;
-    left: 920px;
+    top: -435px;
+    left: 670px;
     width: 900px;
     animation: shapeUnderSlideIn 1.2s cubic-bezier(0, 0.69, 0.19, 1);
+
+    @include for-mid-desktop-up {
+        top: -430px;
+        left: 830px;
+    }
+
+    @include for-big-desktop-up {
+        top: -400px;
+        left: 920px;
+    }
 }
 
 .m-hero--shape {
     position: relative;
     width: 100%;
-    margin: -600px 100px -335px 0;
+    margin: -470px 100px -335px 0;
     z-index: 1;
+
+    @include for-mid-desktop-up {
+        margin-top: -560px;
+    }
+
+    @include for-big-desktop-up {
+        margin-top: -600px;
+    }
 }
 
 @keyframes shapeUnderSlideIn {
