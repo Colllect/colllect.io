@@ -90,10 +90,12 @@
 
 .m-peak--form-input-email {
     width: 400px;
+    z-index: 4;
 }
 
 .m-peak--form-input-password {
     width: 320px;
+    z-index: 4;
 }
 
 .m-peak--form-button {
@@ -102,6 +104,7 @@
     height: 60px;
     padding: 20px 0;
     width: 230px;
+    z-index: 3;
 
     &:focus {
         outline: none;

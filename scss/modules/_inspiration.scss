@@ -1,11 +1,28 @@
-@include for-desktop-up {
-    .m-inspiration {
-        position: relative;
-        margin: 0 180px 580px 854px;
+.m-inspiration--text-wrapper {
+    @include for-desktop-up {
+        width: 400px;
+    }
+    .m-main--subtitle {
+        @include for-mid-desktop-up {
+            padding-top: 35px;
+        }
+        @include for-big-desktop-up {
+            padding-top: 0;
+        }
+    }
+}
+.m-inspiration {
+    position: relative;
+
+    @include for-desktop-up {
+        margin: 85px 200px 580px 700px;
         animation: inspirationFadeIn 2.5s;
     }
-    .m-inspiration--text-wrapper {
-        width: 400px;
+    @include for-mid-desktop-up {
+        margin: 0 200px 580px 780px;
+    }
+    @include for-big-desktop-up {
+        margin: 0 180px 580px 854px;
     }
 }
 
@@ -15,6 +32,7 @@
     padding: 0 20px 20px;
     overflow: auto;
 }
+
 @include for-phone-only {
     .m-inspiration--elements {
         display: flex;
@@ -32,15 +50,25 @@
 
     @include for-desktop-up {
         position: absolute;
-        width: 238px;
+        width: 185px;
         margin: 18px 18px 18px 0;
     }
+
+    @include for-mid-desktop-up {
+        width: 216px;
+    }
+
+    @include for-big-desktop-up {
+        width: 238px;
+    }
 }
+
 .m-inspiration--element-icon {
     width: 30px;
     height: 30px;
     margin-right: 7px;
 }
+
 .m-inspiration--element-name {
     display: inline-block;
     height: 32px;
@@ -50,42 +78,143 @@
     color: $chetwode-blue;
     vertical-align: top;
 }
+
 .m-inspiration--element-description {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
     margin: 5px 0 0;
 }
 
-@keyframes inspirationFadeIn {
-    0%,
-    50% {
-        opacity: 0;
+@include for-desktop-up {
+    .m-inspiration--element-outline {
+        position: absolute;
+        width: 185px;
     }
-    100% {
-        opacity: 1;
+
+    .m-inspiration--element-picture {
+        top: 213px;
+        left: -501px;
+    }
+
+    .m-inspiration--element-note {
+        top: 120px;
+        left: -303px;
+    }
+
+    .m-inspiration--element-link {
+        top: 355px;
+        left: -303px;
+    }
+
+    .m-inspiration--element-color {
+        top: 425px;
+        left: -105px;
+    }
+
+    .m-inspiration--element-outline-feed {
+        top: -67px;
+        left: -501px;
+    }
+
+    .m-inspiration--element-outline-site {
+        top: -145px;
+        left: -303px;
+    }
+
+    .m-inspiration--element-outline-link {
+        top: 630px;
+        left: -105px;
+    }
+
+    .m-inspiration--element-outline-color {
+        top: 740px;
+        left: -105px;
+    }
+
+    .m-inspiration--element-outline-text {
+        top: 757px;
+        left: 97px;
     }
 }
 
-@include for-desktop-up {
+@include for-mid-desktop-up {
+    .m-inspiration--element-description {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .m-inspiration--element-outline {
+        width: 216px;
+    }
+
+    .m-inspiration--element-picture {
+        top: 280px;
+        left: -547px;
+    }
+
+    .m-inspiration--element-note {
+        top: 170px;
+        left: -315px;
+    }
+
+    .m-inspiration--element-link {
+        top: 432px;
+        left: -315px;
+    }
+
+    .m-inspiration--element-color {
+        top: 500px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-feed {
+        top: -51px;
+        left: -547px;
+    }
+
+    .m-inspiration--element-outline-site {
+        top: -144px;
+        left: -315px;
+    }
+
+    .m-inspiration--element-outline-link {
+        top: 725px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-color {
+        top: 848px;
+        left: -85px;
+    }
+
+    .m-inspiration--element-outline-text {
+        top: 757px;
+        left: 143px;
+    }
+}
+
+@include for-big-desktop-up {
     .m-inspiration--element-picture {
         top: 278px;
         left: -597px;
     }
+
     .m-inspiration--element-note {
         top: 155px;
         left: -340px;
     }
+
     .m-inspiration--element-link {
         top: 425px;
         left: -340px;
     }
+
     .m-inspiration--element-color {
         top: 480px;
         left: -85px;
     }
 
     .m-inspiration--element-outline {
-        position: absolute;
         width: 238px;
     }
 
@@ -96,7 +225,7 @@
 
     .m-inspiration--element-outline-site {
         top: -191px;
-        left: -341px;
+        left: -340px;
     }
 
     .m-inspiration--element-outline-link {
@@ -112,5 +241,15 @@
     .m-inspiration--element-outline-text {
         top: 757px;
         left: 172px;
+    }
+}
+
+@keyframes inspirationFadeIn {
+    0%,
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
