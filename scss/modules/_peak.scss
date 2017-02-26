@@ -2,6 +2,14 @@
     position: relative;
     margin: 100px 270px 0;
     background: $shark;
+
+    @include for-tablet-landscape-up {
+        margin: 100px 185px 0;
+    }
+
+    @include for-mid-desktop-up {
+        margin: 100px 270px 0;
+    }
 }
 
 .m-peak--title {

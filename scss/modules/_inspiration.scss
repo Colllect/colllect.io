@@ -85,12 +85,11 @@
     margin: 5px 0 0;
 }
 
-@include for-desktop-up {
-    .m-inspiration--element-outline {
-        position: absolute;
-        width: 185px;
-    }
+.m-inspiration--element-outline {
+    display: none;
+}
 
+@include for-desktop-up {
     .m-inspiration--element-picture {
         top: 213px;
         left: -501px;
@@ -120,12 +119,6 @@
         top: -145px;
         left: -303px;
     }
-
-    .m-inspiration--element-outline-link,
-    .m-inspiration--element-outline-color,
-    .m-inspiration--element-outline-text {
-        display: none;
-    }
 }
 
 @include for-mid-desktop-up {
@@ -135,6 +128,8 @@
     }
 
     .m-inspiration--element-outline {
+        display: block;
+        position: absolute;
         width: 216px;
     }
 
@@ -166,12 +161,6 @@
     .m-inspiration--element-outline-site {
         top: -144px;
         left: -315px;
-    }
-
-    .m-inspiration--element-outline-link,
-    .m-inspiration--element-outline-color,
-    .m-inspiration--element-outline-text {
-        display: block;
     }
 
     .m-inspiration--element-outline-link {

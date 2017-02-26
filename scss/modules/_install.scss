@@ -3,6 +3,14 @@
     margin-top: 10%;
     left: -10%;
     width: 50%;
+
+    @include for-desktop-up {
+        margin-top: 17%;
+    }
+
+    @include for-mid-desktop-up {
+        margin-top: 12%;
+    }
 }
 
 .m-install--ui {
@@ -74,6 +82,14 @@ $footer-height: 1000px;
     right: 185px;
     width: 400px;
     text-align: center;
+
+    @include for-desktop-up {
+        right: 100px;
+    }
+
+    @include for-mid-desktop-up {
+        right: 185px;
+    }
 }
 
 .m-install--icon {

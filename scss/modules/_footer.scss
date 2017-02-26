@@ -29,7 +29,14 @@
 .m-footer--line {
     max-width: 1520px;
     margin: 0 auto 50px;
-    padding: 0 185px;
+
+    @include for-tablet-landscape-up {
+        padding: 0 100px;
+    }
+
+    @include for-mid-desktop-up {
+        padding: 0 185px;
+    }
 }
 
 .m-footer--line-klaus {

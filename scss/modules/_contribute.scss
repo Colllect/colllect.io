@@ -5,6 +5,14 @@
     margin: 450px 185px 0;
     padding: 120px 0 70px 84px;
     border-radius: $border-radius;
+
+    @include for-desktop-up {
+        margin: 450px 100px 0;
+    }
+
+    @include for-mid-desktop-up {
+        margin: 450px 185px 0;
+    }
 }
 
 .m-contribute--title {

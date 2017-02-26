@@ -14,7 +14,8 @@
 .m-control--columns {
     display: flex;
     text-align: left;
-    margin: 80px 185px;
+    margin: 80px auto;
+    max-width: 1250px;
 }
 
 .m-control--column {
