@@ -121,19 +121,10 @@
         left: -303px;
     }
 
-    .m-inspiration--element-outline-link {
-        top: 630px;
-        left: -105px;
-    }
-
-    .m-inspiration--element-outline-color {
-        top: 740px;
-        left: -105px;
-    }
-
+    .m-inspiration--element-outline-link,
+    .m-inspiration--element-outline-color,
     .m-inspiration--element-outline-text {
-        top: 757px;
-        left: 97px;
+        display: none;
     }
 }
 
@@ -177,19 +168,25 @@
         left: -315px;
     }
 
+    .m-inspiration--element-outline-link,
+    .m-inspiration--element-outline-color,
+    .m-inspiration--element-outline-text {
+        display: block;
+    }
+
     .m-inspiration--element-outline-link {
         top: 725px;
         left: -85px;
     }
 
     .m-inspiration--element-outline-color {
-        top: 848px;
+        top: 851px;
         left: -85px;
     }
 
     .m-inspiration--element-outline-text {
-        top: 757px;
-        left: 143px;
+        top: 791px;
+        left: 147px;
     }
 }
 
@@ -234,7 +231,7 @@
     }
 
     .m-inspiration--element-outline-color {
-        top: 820px;
+        top: 821px;
         left: -85px;
     }
 

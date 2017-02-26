@@ -1,19 +1,47 @@
 .m-organise {
     position: relative;
     margin: -60px 0 200px;
+
+    @include for-desktop-up {
+        margin: -160px 0 200px;
+    }
+
+    @include for-mid-desktop-up {
+        margin: -60px 0 200px;
+    }
 }
 
 .m-organise--subtitle,
 .m-organise--title,
 .m-organise--text {
-    width: 400px;
-    margin-left: 185px;
+    @include for-desktop-up {
+        width: 400px;
+        margin-left: 100px;
+    }
+
+    @include for-mid-desktop-up {
+        width: 365px;
+        margin-left: 185px;
+    }
+
+    @include for-big-desktop-up {
+        width: 400px;
+        margin-left: 185px;
+    }
 }
 
 .m-organise--menu {
     display: inline-block;
     position: relative;
     margin: 50px 0 0 168px;
+
+    @include for-desktop-up {
+        margin: 30px 0 0 83px;
+    }
+
+    @include for-mid-desktop-up {
+        margin: 50px 0 0 168px;
+    }
 }
 
 .m-organise--menu-item {
@@ -95,6 +123,18 @@
     pointer-events: none;
     border-radius: $border-radius;
     transition: top 150ms, bottom 150ms;
+
+    @include for-desktop-up {
+        width: 436px;
+    }
+
+    @include for-mid-desktop-up {
+        width: 400px;
+    }
+
+    @include for-big-desktop-up {
+        width: 436px;
+    }
 }
 
 .m-organise--shape {
@@ -102,6 +142,22 @@
     top: -82px;
     right: 5px;
     width: 1000px;
+
+    @include for-desktop-up {
+        top: -60px;
+        right: -75px;
+        width: 785px;
+    }
+    @include for-mid-desktop-up {
+        top: -82px;
+        right: 6px;
+        width: 910px;
+    }
+    @include for-big-desktop-up {
+        top: -82px;
+        right: 5px;
+        width: 1000px;
+    }
 }
 
 .m-organise--shape-select-tag {
