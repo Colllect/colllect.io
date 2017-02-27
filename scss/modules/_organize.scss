@@ -1,29 +1,33 @@
 .m-organise {
     position: relative;
-    margin: -60px 0 200px;
+    margin-bottom: 200px;
 
-    @include for-desktop-up {
-        margin: -160px 0 200px;
+    @include for-tablet-landscape-up {
+        margin-top: -60px;
     }
-
+    @include for-desktop-up {
+        margin-top: -160px;
+    }
     @include for-mid-desktop-up {
-        margin: -60px 0 200px;
+        margin-top: -60px;
     }
 }
 
 .m-organise--subtitle,
 .m-organise--title,
 .m-organise--text {
+    @include for-tablet-landscape-up {
+        width: 300px;
+        margin-left: 100px;
+    }
     @include for-desktop-up {
         width: 400px;
         margin-left: 100px;
     }
-
     @include for-mid-desktop-up {
         width: 365px;
         margin-left: 185px;
     }
-
     @include for-big-desktop-up {
         width: 400px;
         margin-left: 185px;
@@ -31,14 +35,13 @@
 }
 
 .m-organise--menu {
-    display: inline-block;
     position: relative;
-    margin: 50px 0 0 168px;
+    margin: -60px 0 0;
 
     @include for-tablet-landscape-up {
+        display: inline-block;
         margin: 30px 0 0 83px;
     }
-
     @include for-mid-desktop-up {
         margin: 50px 0 0 168px;
     }
@@ -51,35 +54,65 @@
     background: transparent;
     border: none;
     text-align: left;
-    padding: 22px 0 22px 85px;
+    padding: 15px 0 15px 45px;
     color: rgba($chetwode-blue, 0.4);
     font-family: $font-roboto;
+    font-size: 13px;
     cursor: pointer;
     transition: color 200ms;
 
     &:hover,
+    &:active,
     &:focus {
         outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
     strong {
         display: block;
         font-family: $font-montserrat;
         color: $shark;
-        padding-bottom: 8px;
+        padding-bottom: 4px;
+        font-size: 16px;
+    }
+
+    @include for-tablet-landscape-up {
+        width: 400px;
+        padding: 22px 0 22px 85px;
+        font-size: 16px;
+
+        strong {
+            padding-bottom: 8px;
+        }
+    }
+    @include for-desktop-up {
+        width: 436px;
+    }
+    @include for-mid-desktop-up {
+        width: 400px;
+    }
+    @include for-big-desktop-up {
+        width: 436px;
     }
 }
 
 .m-organise--menu-item-arrow {
     position: absolute;
     top: 50%;
-    left: 50px;
-    width: 30px;
-    height: 30px;
-    padding: 8px;
+    left: 23px;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
     border: 1px solid rgba($chetwode-blue, 0.4);
     border-radius: 100%;
     transform: translate(-50%, -50%);
+
+    @include for-tablet-landscape-up {
+        left: 50px;
+        width: 30px;
+        height: 30px;
+        padding: 8px;
+    }
 }
 
 .m-organise--menu-item-arrow-spike {
@@ -117,33 +150,42 @@
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 88px;
-    width: 436px;
+    height: 68px;
+    width: 100%;
     box-shadow: 0 8px 29px rgba($chetwode-blue, 0.35);
     pointer-events: none;
     border-radius: $border-radius;
     transition: top 150ms, bottom 150ms;
 
     @include for-tablet-landscape-up {
+        width: 400px;
+        height: 88px;
+    }
+    @include for-desktop-up {
         width: 436px;
     }
-
     @include for-mid-desktop-up {
         width: 400px;
     }
-
     @include for-big-desktop-up {
         width: 436px;
     }
 }
 
 .m-organise--shape {
-    position: absolute;
-    top: -82px;
-    right: 5px;
-    width: 1000px;
+    width: 152%;
+    max-height: 110vw;
+    margin: -30px 0 0 -25%;
 
     @include for-tablet-landscape-up {
+        position: absolute;
+        margin: 0;
+        top: 30px;
+        right: -50px;
+        width: 630px;
+        max-height: inherit;
+    }
+    @include for-desktop-up {
         top: -60px;
         right: -75px;
         width: 785px;
@@ -270,65 +312,6 @@
             animation: selectTchatStroke 0.75s;
         }
     }
-
-    @keyframes selectNotificationOpacity {
-        0%,
-        50% {
-            opacity: 0.4;
-        }
-        75%,
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes selectTchatOpacity {
-        0%,
-        75% {
-            opacity: 0.4;
-        }
-        100% {
-            opacity: 1;
-        }
-    }
-
-    @keyframes selectPlayerStroke {
-        0%,
-        25% {
-            stroke: transparent;
-            stroke-width: 0;
-        }
-        50%,
-        100% {
-            stroke: $wewak;
-            stroke-width: 4px;
-        }
-    }
-
-    @keyframes selectNotificationStroke {
-        0%,
-        50% {
-            stroke: transparent;
-            stroke-width: 0;
-        }
-        75%,
-        100% {
-            stroke: $wewak;
-            stroke-width: 4px;
-        }
-    }
-
-    @keyframes selectTchatStroke {
-        0%,
-        75% {
-            stroke: transparent;
-            stroke-width: 0;
-        }
-        100% {
-            stroke: $wewak;
-            stroke-width: 4px;
-        }
-    }
 }
 
 .m-organise--shape[data-state-name="collections"] {
@@ -347,5 +330,64 @@
     .m-organise--shape-collection {
         opacity: 1;
         transform: translate(0, 0);
+    }
+}
+
+@keyframes selectNotificationOpacity {
+    0%,
+    50% {
+        opacity: 0.4;
+    }
+    75%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes selectTchatOpacity {
+    0%,
+    75% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes selectPlayerStroke {
+    0%,
+    25% {
+        stroke: transparent;
+        stroke-width: 0;
+    }
+    50%,
+    100% {
+        stroke: $wewak;
+        stroke-width: 4px;
+    }
+}
+
+@keyframes selectNotificationStroke {
+    0%,
+    50% {
+        stroke: transparent;
+        stroke-width: 0;
+    }
+    75%,
+    100% {
+        stroke: $wewak;
+        stroke-width: 4px;
+    }
+}
+
+@keyframes selectTchatStroke {
+    0%,
+    75% {
+        stroke: transparent;
+        stroke-width: 0;
+    }
+    100% {
+        stroke: $wewak;
+        stroke-width: 4px;
     }
 }

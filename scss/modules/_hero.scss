@@ -1,7 +1,7 @@
 .m-hero {
     position: relative;
     color: $white;
-    padding: 0 15px;
+    padding: 0 25px;
     z-index: 2;
 
     @include for-desktop-up {
@@ -36,12 +36,15 @@
 }
 
 .m-hero--subtitle {
-    font-size: 14px;
+    max-width: 220px;
+    font-size: 16px;
     line-height: 25px;
     margin: 25px 0 30px;
     animation: heroSlideUp 1.85s cubic-bezier(0, 0.69, 0.19, 1);
 
     @include for-desktop-up {
+        max-width: inherit;
+        font-size: 14px;
         margin: 20px 0 35px;
     }
 
@@ -76,20 +79,29 @@
 
 .m-hero--shapes {
     position: relative;
+    height: 55vw;
+
+    @include for-tablet-landscape-up {
+        height: auto;
+    }
 }
 
 .m-hero--shape-under {
     position: absolute;
-    top: -435px;
-    left: 670px;
-    width: 900px;
+    top: -65vw;
+    left: 20%;
+    width: 150%;
     animation: shapeUnderSlideIn 1.2s cubic-bezier(0, 0.69, 0.19, 1);
 
+    @include for-desktop-up {
+        top: -435px;
+        left: 670px;
+        width: 900px;
+    }
     @include for-mid-desktop-up {
         top: -430px;
         left: 830px;
     }
-
     @include for-big-desktop-up {
         top: -400px;
         left: 920px;
@@ -98,14 +110,19 @@
 
 .m-hero--shape {
     position: relative;
-    width: 100%;
-    margin: -470px 100px -335px 0;
     z-index: 1;
+    width: 220%;
+    margin: -112vw 0 0 50%;
+    transform: translateX(-50%);
 
+    @include for-desktop-up {
+        width: 100%;
+        margin: -470px 100px -335px 0;
+        transform: none;
+    }
     @include for-mid-desktop-up {
         margin-top: -560px;
     }
-
     @include for-big-desktop-up {
         margin-top: -600px;
     }
