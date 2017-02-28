@@ -1,10 +1,26 @@
 .m-peak {
     position: relative;
-    margin: 100px 270px 0;
+    margin: 0;
+    padding: 0 20px 50px;
     background: $shark;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #282a2d;
+        margin-top: -50px;
+        margin-bottom: 50px;
+    }
 
     @include for-tablet-landscape-up {
         margin: 100px 185px 0;
+        padding: 0;
+
+        &::before {
+            display: none;
+        }
     }
 
     @include for-mid-desktop-up {
@@ -15,10 +31,14 @@
 .m-peak--title {
     display: block;
     font-family: $font-cocogoose;
-    font-size: 54px;
+    font-size: 30px;
     font-weight: normal;
     text-align: center;
     color: $white;
+
+    @include for-tablet-landscape-up {
+        font-size: 54px;
+    }
 }
 
 .m-peak--text {
@@ -39,17 +59,34 @@
             color: $chetwode-blue;
         }
     }
+
+    .desktop-only {
+        display: none;
+    }
+
+    @include for-tablet-landscape-up {
+        .desktop-only {
+            display: inline;
+        }
+    }
 }
 
 .m-peak--form {
-    display: flex;
-    margin: 70px 0 0;
+    @include for-tablet-landscape-up {
+        display: flex;
+        margin: 70px 0 0;
+    }
 }
 
 .m-peak--form-input {
     position: relative;
-    margin-right: 20px;
     height: 60px;
+    margin-bottom: 15px;
+
+    @include for-tablet-landscape-up {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
 
     input {
         height: 100%;
@@ -97,13 +134,19 @@
 }
 
 .m-peak--form-input-email {
-    width: 400px;
     z-index: 4;
+
+    @include for-tablet-landscape-up {
+        width: 400px;
+    }
 }
 
 .m-peak--form-input-password {
-    width: 320px;
     z-index: 4;
+
+    @include for-tablet-landscape-up {
+        width: 320px;
+    }
 }
 
 .m-peak--form-button {
@@ -111,10 +154,16 @@
     cursor: pointer;
     height: 60px;
     padding: 20px 0;
-    width: 230px;
+    margin-top: 15px;
+    width: 100%;
     z-index: 3;
 
     &:focus {
         outline: none;
+    }
+
+    @include for-tablet-landscape-up {
+        margin-top: 0;
+        width: 230px;
     }
 }

@@ -1,13 +1,18 @@
 .m-contribute {
     position: relative;
-    border: 2px solid $white;
     color: $white;
-    margin: 450px 185px 0;
-    padding: 120px 0 70px 84px;
-    border-radius: $border-radius;
+    background: $shark;
+    margin: 70px 0 0;
+    padding: 0 20px 70px;
 
     @include for-desktop-up {
+        padding-top: 120px;
         margin: 450px 100px 0;
+        padding-left: 84px;
+        padding-right: 0;
+        border: 2px solid $white;
+        border-radius: $border-radius;
+        background: transparent;
     }
 
     @include for-mid-desktop-up {
@@ -16,70 +21,132 @@
 }
 
 .m-contribute--title {
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $shark;
+    display: block;
+    margin: 0 auto 50px;
+    width: 75%;
+    text-align: center;
     font-family: $font-cocogoose;
-    font-size: 54px;
-    padding: 0 35px;
+    font-size: 34px;
+    line-height: 40px;
+
+    @include for-desktop-up {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        padding: 0 35px;
+        font-size: 54px;
+        line-height: 24px;
+        white-space: nowrap;
+        background-color: $shark;
+    }
 }
 
 .m-contribute--columns {
-    display: flex;
+    @include for-desktop-up {
+        display: flex;
+    }
 }
 
 .m-contribute--column {
-    padding-right: 100px;
+    padding-bottom: 30px;
 
-    &:nth-child(1) {
-        width: 400px;
+    br {
+        display: none;
     }
 
-    &:nth-child(2) {
-        width: 350px;
-    }
+    @include for-desktop-up {
+        padding-right: 100px;
 
-    &:nth-child(3) {
-        width: 330px;
+        &:nth-child(1) {
+            width: 400px;
+        }
+
+        &:nth-child(2) {
+            width: 350px;
+        }
+
+        &:nth-child(3) {
+            width: 330px;
+        }
+
+        br {
+            display: block;
+        }
     }
 }
 
 .m-contribute--column-title {
     font-family: $font-montserrat;
-    font-size: 20px;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 
     svg {
         display: inline-block;
-        width: 10px;
-        margin-right: 10px;
+        width: 6px;
+        margin-right: 4px;
+        transform: translateY(-1px);
+    }
+
+    @include for-desktop-up {
+        display: inline;
+        width: auto;
+        text-align: left;
+        font-size: 20px;
+
+        svg {
+            width: 10px;
+            margin-right: 10px;
+        }
     }
 }
 
 .m-contribute--column-content {
     color: $shuttle-gray;
     line-height: 28px;
-    min-height: 60px;
+    margin-top: 10px;
+
+    @include for-desktop-up {
+        margin-top: 15px;
+        min-height: 60px;
+    }
 }
 
 .m-contribute--link {
     position: relative;
-    display: inline-block;
+    display: block;
     line-height: 40px;
     color: $white;
     text-decoration: none;
-    border-bottom: 2px solid $chetwode-blue;
+    text-align: center;
+    border: 2px solid $chetwode-blue;
     margin-bottom: 15px;
-    padding-right: 40px;
     font-family: $font-montserrat;
+    border-radius: 50px;
+
+    @include for-desktop-up {
+        display: inline-block;
+        text-align: left;
+        border: none;
+        border-bottom: 2px solid $chetwode-blue;
+        padding-right: 40px;
+        border-radius: 0;
+    }
 }
 
 .m-contribute--link-arrow {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 10px;
-    transform: translate(0, -50%);
+    display: none;
+
+    @include for-desktop-up {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 10px;
+        transform: translate(0, -50%);
+    }
 }

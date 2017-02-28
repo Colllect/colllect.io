@@ -8,10 +8,11 @@
     font-weight: bold;
     text-decoration: none;
     border-radius: 50px;
-    box-shadow: 0 0 87px rgba($violet-red, 0.75);
+    box-shadow: 0 5px 50px rgba($violet-red, 0.7);
 
     @include for-desktop-up {
         font-size: 16px;
         padding: 25px 80px;
+        box-shadow: 0 0 87px rgba($violet-red, 0.75);
     }
 }

@@ -1,11 +1,13 @@
 .m-install--shape-under {
     position: absolute;
-    margin-top: 10%;
-    left: -10%;
-    width: 50%;
+    margin-top: 27%;
+    left: -50%;
+    width: 150%;
 
     @include for-desktop-up {
         margin-top: 17%;
+        left: -10%;
+        width: 50%;
     }
 
     @include for-mid-desktop-up {
@@ -14,20 +16,29 @@
 }
 
 .m-install--ui {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    padding: 40px 270px 0;
-    width: 1522px;
+    display: none;
 
-    img {
-        width: 100%;
-        box-shadow: 0 5px 29px rgba($shark, 0.25);
+    @include for-tablet-landscape-up {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 40px 270px 0;
+        width: 1522px;
+
+        img {
+            width: 100%;
+            box-shadow: 0 5px 29px rgba($shark, 0.25);
+        }
     }
 }
 
 .m-install--background-wrapper {
-    margin-top: 200px;
+    margin-top: -55px;
+
+    @include for-tablet-landscape-up {
+        margin-top: 200px;
+    }
 }
 
 .m-install--background-inner {
@@ -46,16 +57,27 @@ $footer-height: 1000px;
 
 .m-install--background-shape-left {
     position: absolute;
-    left: 0;
+    left: -50px;
     bottom: #{-3450px + $footer-height};
+    margin-bottom: -20px;
     width: 1847px;
+
+    @include for-tablet-landscape-up {
+        left: 0;
+        margin-bottom: 0;
+    }
 }
 
 .m-install--background-shape-right {
-    position: absolute;
-    right: 0;
-    bottom: #{-1220px + $footer-height};
-    width: 1317px;
+    display: none;
+
+    @include for-tablet-landscape-up {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: #{-1220px + $footer-height};
+        width: 1317px;
+    }
 }
 
 .m-install--background-shape-left-mask {
@@ -77,11 +99,19 @@ $footer-height: 1000px;
 }
 
 .m-install {
-    position: absolute;
-    top: -120px;
-    right: 185px;
-    width: 400px;
+    position: relative;
     text-align: center;
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+
+    @include for-tablet-landscape-up {
+        position: absolute;
+        top: -120px;
+        right: 185px;
+        width: 400px;
+        max-width: inherit;
+    }
 
     @include for-desktop-up {
         right: 100px;
@@ -96,31 +126,52 @@ $footer-height: 1000px;
     display: block;
     width: 34px;
     height: 34px;
-    margin: 50px auto 25px;
+    margin: 65px auto 15px;
+
+    @include for-tablet-portrait-up {
+        margin: 50px auto 25px;
+    }
 }
 .m-install--title {
     display: block;
     font-family: $font-montserrat;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include for-tablet-portrait-up {
+        font-size: 20px;
+        line-height: 24px;
+    }
 }
 .m-install--content {
     color: $white;
-    line-height: 24px;
-    padding: 5px 60px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 5px;
+    padding: 5px 50px 20px;
+
+    @include for-tablet-portrait-up {
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 .m-install--button {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    font-family: $font-montserrat;
-    color: $shark;
-    background: $white;
-    width: 234px;
-    padding: 22px 0;
-    margin: 0 auto;
-    border-radius: 100px;
-    box-shadow: 0 10px 60px rgba($rhino, 0.5);
+    display: none;
+
+    @include for-desktop-up {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        font-family: $font-montserrat;
+        color: $shark;
+        background: $white;
+        width: 234px;
+        padding: 22px 0;
+        margin: 0 auto;
+        border-radius: 100px;
+        box-shadow: 0 10px 60px rgba($rhino, 0.5);
+    }
 }
 .m-install--arrow {
     position: absolute;
