@@ -1,5 +1,7 @@
 .m-control {
-    text-align: center;
+    @include for-tablet-landscape-up {
+        text-align: center;
+    }
 }
 
 .m-control--title {
@@ -7,19 +9,24 @@
 }
 
 .m-control--text {
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .m-control--columns {
-    display: flex;
     text-align: left;
-    margin: 80px auto;
     max-width: 1250px;
+
+    @include for-tablet-landscape-up {
+        display: flex;
+        margin: 80px auto;
+    }
 }
 
 .m-control--column {
-    padding: 50px 84px 30px;
+    @include for-tablet-landscape-up {
+        padding: 50px 84px 30px;
+    }
 
     strong {
         font-family: $font-montserrat;
@@ -32,19 +39,33 @@
 }
 
 .m-control--column-interface-storage {
-    margin-right: 90px;
-    padding-top: 80px;
-    padding-right: 0;
+    padding-top: 40px;
 
     .m-control--block + .m-control--block {
-        margin-top: 100px;
+        margin-top: 40px;
+    }
+
+    @include for-tablet-landscape-up {
+        margin-right: 90px;
+        padding-top: 80px;
+        padding-right: 0;
+
+        .m-control--block + .m-control--block {
+            margin-top: 100px;
+        }
     }
 }
 
 .m-control--column-likely {
-    margin-left: 90px;
+    padding: 40px 20px;
+    margin: 50px -10px 0;
     background-color: $catskill-white;
     border-radius: $border-radius;
+
+    @include for-tablet-landscape-up {
+        padding: 40px;
+        margin: 0 0 0 90px;
+    }
 
     .m-control--column-title {
         display: block;
@@ -77,21 +98,33 @@
 }
 
 .m-control--dots {
-    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
 
+    @include for-tablet-landscape-up {
+        display: flex;
+    }
+
     li {
         margin-right: 30px;
-        font-size: 14px;
+        padding-bottom: 15px;
         font-family: $font-montserrat;
+
+        @include for-tablet-landscape-up {
+            padding-bottom: 0;
+            font-size: 14px;
+        }
 
         svg {
             float: left;
             width: 6px;
             margin-right: 10px;
-            transform: translateY(3px);
+            transform: translateY(5px);
+
+            @include for-tablet-landscape-up {
+                transform: translateY(3px);
+            }
         }
     }
 }

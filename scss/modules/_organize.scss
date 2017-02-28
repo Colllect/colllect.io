@@ -1,9 +1,10 @@
 .m-organise {
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 70px;
 
     @include for-tablet-landscape-up {
         margin-top: -60px;
+        margin-bottom: 200px;
     }
     @include for-desktop-up {
         margin-top: -160px;
