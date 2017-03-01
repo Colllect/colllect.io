@@ -5,23 +5,26 @@ body {
     font-family: $font-roboto;
 }
 
-html {
+html,
+body {
     overflow-y: scroll;
     overflow-x: hidden;
 }
+@include for-desktop-up {
+    body {
+        overflow: visible;
+    }
+}
 
 body {
-    &::before {
-        content: "";
+    .body-shape {
         display: block;
         position: absolute;
-        top: calc(-#{$body-background-height} + 300px);
-        left: calc(50% - #{$body-background-width / 2});
+        top: calc(-#{$body-background-height} + 400px);
+        left: 0;
         height: $body-background-height;
-        width: $body-background-width;
+        width: 100%;
         background: $shark;
-        transform-origin: bottom center;
-        transform: rotate(-30deg);
         transition: all 300ms;
         pointer-events: none;
         user-select: none;
@@ -32,21 +35,25 @@ body {
         margin: 0 auto;
         max-width: 1180px;
 
-        &::before {
+        .body-shape {
             top: calc(-#{$body-background-height} + 680px);
+            left: calc(50% - #{$body-background-width / 2});
+            width: $body-background-width;
+            transform-origin: bottom center;
+            transform: rotate(-30deg);
         }
     }
     @include for-mid-desktop-up {
         max-width: 1380px;
 
-        &::before {
+        .body-shape {
             top: calc(-#{$body-background-height} + 765px);
         }
     }
     @include for-big-desktop-up {
         max-width: 1522px;
 
-        &::before {
+        .body-shape {
             top: calc(-#{$body-background-height} + 875px);
         }
     }
