@@ -1,3 +1,9 @@
+var isSafari = /^((?!chrome).)*safari/i.test(navigator.userAgent);
+if (isSafari) {
+  document.documentElement.classList.add('is-safari');
+}
+
+
 function each (domElementList, callback) {
   for (var i = 0; i < domElementList.length; i += 1) {
     callback(domElementList[ i ]);

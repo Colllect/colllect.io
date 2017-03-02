@@ -5,15 +5,18 @@ body {
     font-family: $font-roboto;
 }
 
-html,
+.is-safari {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @include for-desktop-up {
+        overflow: visible;
+    }
+}
+
 body {
     overflow-y: scroll;
     overflow-x: hidden;
-}
-@include for-desktop-up {
-    body {
-        overflow: visible;
-    }
 }
 
 body {
