@@ -1,9 +1,10 @@
 .m-footer {
+    position: relative;
     text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding: 100px 20px 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    padding: 100px 20px 50px;
     color: $shuttle-gray;
     background: $shark;
     line-height: 35px;
@@ -58,7 +59,13 @@
         display: block;
         height: 1px;
         width: 100%;
+        max-width: calc(420px + ((100% - 420px)/ 2));
+        margin: 0 auto;
         background: #282a2d;
+
+        @include for-desktop-up {
+            max-width: inherit;
+        }
     }
 }
 

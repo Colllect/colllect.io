@@ -2,6 +2,7 @@
     @include for-desktop-up {
         width: 400px;
     }
+
     .m-main--subtitle {
         @include for-mid-desktop-up {
             padding-top: 35px;
@@ -13,6 +14,7 @@
 }
 .m-inspiration {
     position: relative;
+    margin-top: -100px;
 
     @include for-desktop-up {
         margin: 85px 200px 580px 700px;
@@ -31,12 +33,23 @@
     margin-left: -20px;
     padding: 0 20px 20px;
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include for-tablet-portrait-up {
+        margin-left: -50px;
+    }
 }
 
-@include for-phone-only {
-    .m-inspiration--elements {
-        display: flex;
-        width: calc(((65vw + 10px) * 4) + 10px);
+.m-inspiration--elements {
+    display: flex;
+    width: calc(((65vw + 10px) * 4) + 10px);
+
+    @include for-tablet-portrait-up {
+        width: calc(((35vw + 10px) * 4) + 10px);
+    }
+    @include for-desktop-up {
+        display: block;
+        width: 100%;
     }
 }
 

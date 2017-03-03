@@ -5,9 +5,18 @@ body {
     font-family: $font-roboto;
 }
 
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
 .is-safari {
     overflow-y: scroll;
     overflow-x: hidden;
+
+    body {
+        overflow-y: visible;
+    }
 
     @include for-desktop-up {
         overflow: visible;
@@ -15,12 +24,8 @@ body {
 }
 
 body {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-body {
-    .body-shape {
+    &::before {
+        content: "";
         display: block;
         position: absolute;
         top: calc(-#{$body-background-height} + 400px);
@@ -28,35 +33,40 @@ body {
         height: $body-background-height;
         width: 100%;
         background: $shark;
-        transition: all 300ms;
+        transform: skewY(-30deg);
         pointer-events: none;
         user-select: none;
         z-index: 1;
+        transition: all 300ms;
     }
 
+    @include for-tablet-portrait-up {
+        margin: 0 auto;
+        max-width: 1180px;
+
+        &::before {
+            top: calc(-#{$body-background-height} + 620px);
+        }
+    }
     @include for-desktop-up {
         margin: 0 auto;
         max-width: 1180px;
 
-        .body-shape {
+        &::before {
             top: calc(-#{$body-background-height} + 680px);
-            left: calc(50% - #{$body-background-width / 2});
-            width: $body-background-width;
-            transform-origin: bottom center;
-            transform: rotate(-30deg);
         }
     }
     @include for-mid-desktop-up {
         max-width: 1380px;
 
-        .body-shape {
+        &::before {
             top: calc(-#{$body-background-height} + 765px);
         }
     }
     @include for-big-desktop-up {
         max-width: 1522px;
 
-        .body-shape {
+        &::before {
             top: calc(-#{$body-background-height} + 875px);
         }
     }

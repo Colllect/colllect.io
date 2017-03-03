@@ -4,6 +4,9 @@
     padding: 30px 30px;
     z-index: 1;
 
+    @include for-tablet-portrait-up {
+        padding: 30px 50px;
+    }
     @include for-desktop-up {
         padding: 50px 185px;
     }
@@ -26,16 +29,15 @@
     font-size: 13px;
 }
 
-@include for-phone-only {
-    .m-header--logbox {
-        display: none;
-    }
+.m-header--logbox {
+    display: none;
 }
-@include for-desktop-up {
+@include for-tablet-portrait-up {
     .m-header--logbox {
+        display: block;
         position: absolute;
-        top: 50px;
-        right: 185px;
+        top: 27px;
+        right: 50px;
     }
     .m-header--logbox-button {
         display: inline-block;
@@ -50,5 +52,11 @@
     .m-header--logbox-button-highlight {
         color: $white;
         background-color: $chetwode-blue;
+    }
+}
+@include for-desktop-up {
+    .m-header--logbox {
+        top: 50px;
+        right: 185px;
     }
 }

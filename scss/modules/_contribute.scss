@@ -2,14 +2,16 @@
     position: relative;
     color: $white;
     background: $shark;
-    margin: 70px 0 0;
+    margin: 70px auto 0;
     padding: 0 20px 70px;
+    max-width: 450px;
 
     @include for-desktop-up {
         padding-top: 120px;
         margin: 450px 100px 0;
         padding-left: 84px;
         padding-right: 0;
+        max-width: inherit;
         border: 2px solid $white;
         border-radius: $border-radius;
         background: transparent;
