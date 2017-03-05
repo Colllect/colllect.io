@@ -83,8 +83,14 @@
 
 .m-hero--shapes {
     position: relative;
-    height: 55vw;
+    height: 85vw;
 
+    @include for-tablet-portrait-up {
+        height: 63vw;
+    }
+    @media (min-width: 750px) {
+        height: 55vw;
+    }
     @include for-tablet-landscape-up {
         height: auto;
     }
@@ -127,6 +133,9 @@
     @include for-tablet-portrait-up {
         width: calc(100% + 50px);
         margin: 0 0 -335px -25px;
+        transform: translateY(-280px);
+    }
+    @media (min-width: 750px) {
         transform: translateY(-350px);
     }
     @include for-desktop-up {

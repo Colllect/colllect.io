@@ -9,16 +9,21 @@
 }
 
 .m-control--text {
-    max-width: 600px;
-    margin: 0 auto;
+    @include for-tablet-landscape-up {
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
 
 .m-control--columns {
     text-align: left;
     max-width: 1250px;
 
-    @include for-tablet-landscape-up {
+    @include for-tablet-portrait-up {
         display: flex;
+        margin: 50px auto;
+    }
+    @include for-tablet-landscape-up {
         margin: 80px auto;
     }
 }
@@ -45,6 +50,9 @@
         margin-top: 40px;
     }
 
+    @include for-tablet-portrait-up {
+        padding-right: 30px;
+    }
     @include for-tablet-landscape-up {
         margin-right: 90px;
         padding-top: 80px;
@@ -57,13 +65,16 @@
 }
 
 .m-control--column-likely {
-    padding: 40px 20px;
+    padding: 40px 20px 1px;
     margin: 50px -10px 0;
     background-color: $catskill-white;
     border-radius: $border-radius;
 
+    @include for-tablet-portrait-up {
+        margin-top: -41px;
+    }
     @include for-tablet-landscape-up {
-        padding: 40px;
+        padding: 40px 40px 0;
         margin: 0 0 0 90px;
     }
 
@@ -82,6 +93,11 @@
     p {
         font-size: 14px;
         line-height: 24px;
+
+        @include for-tablet-portrait-up {
+            font-size: 16px;
+            line-height: 28px;
+        }
     }
 }
 

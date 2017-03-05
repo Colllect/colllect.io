@@ -60,9 +60,9 @@
     line-height: 28px;
 
     @include for-tablet-portrait-up {
-        width: 75%;
+        max-width: 500px;
     }
-    @include for-desktop-up {
-        width: 100%;
+    @include for-tablet-landscape-up {
+        max-width: inherit;
     }
 }

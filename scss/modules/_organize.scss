@@ -39,7 +39,11 @@
     position: relative;
     margin: -60px 0 0;
 
+    @media (min-width: 750px) {
+        margin: 16% 370px 16% -10px;
+    }
     @include for-tablet-landscape-up {
+        width: 100%;
         display: inline-block;
         margin: 30px 0 0 83px;
     }
@@ -176,8 +180,20 @@
 .m-organise--shape {
     width: 152%;
     max-height: 110vw;
-    margin: -30px 0 0 -25%;
+    max-width: 500px;
+    margin: -30px 0 0 50%;
+    transform: translateX(-50%);
 
+    @media (min-width: 750px) {
+        position: absolute;
+        margin-top: 30px;
+        top: calc(150px - 10%);
+        right: 0;
+        margin-right: -15%;
+        width: calc(152% - 500px);
+        max-width: 520px;
+        transform: none;
+    }
     @include for-tablet-landscape-up {
         position: absolute;
         margin: 0;
@@ -185,6 +201,7 @@
         right: -50px;
         width: 630px;
         max-height: inherit;
+        max-width: inherit;
     }
     @include for-desktop-up {
         top: -60px;

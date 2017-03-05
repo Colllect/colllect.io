@@ -36,6 +36,9 @@
 .m-install--background-wrapper {
     margin-top: -55px;
 
+    @include for-tablet-portrait-up {
+        margin-top: 0;
+    }
     @include for-tablet-landscape-up {
         margin-top: 200px;
     }
