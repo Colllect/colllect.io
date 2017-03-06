@@ -47,9 +47,11 @@
     @include for-tablet-portrait-up {
         width: calc(((35vw + 10px) * 4) + 10px);
     }
+    @include for-tablet-landscape-up {
+        width: 100%;
+    }
     @include for-desktop-up {
         display: block;
-        width: 100%;
     }
 }
 

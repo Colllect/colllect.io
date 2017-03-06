@@ -29,6 +29,9 @@
     }
 
     @include for-tablet-landscape-up {
+        padding-top: 50px;
+    }
+    @include for-desktop-up {
         padding: 150px 0 15px;
         text-align: left;
 
@@ -86,7 +89,7 @@
         margin-bottom: 30px;
     }
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         display: flex;
 
         & > :first-child {
@@ -117,7 +120,7 @@
     margin-right: 5px;
     transform: translateY(7px);
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         transform: none;
         vertical-align: bottom;
     }
@@ -128,7 +131,7 @@
     max-width: 200px;
     margin-top: 20px;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         display: block;
         margin: 0;
         width: 135px;

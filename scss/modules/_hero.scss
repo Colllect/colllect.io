@@ -108,6 +108,10 @@
         left: 30%;
         width: 100%;
     }
+    @include for-tablet-landscape-up {
+        top: -45vw;
+        left: 50%;
+    }
     @include for-desktop-up {
         top: -435px;
         left: 670px;
@@ -137,6 +141,10 @@
     }
     @media (min-width: 750px) {
         transform: translateY(-350px);
+    }
+    @include for-tablet-landscape-up {
+        margin: -420px 0 0 -25px;
+        transform: none;
     }
     @include for-desktop-up {
         width: 100%;

@@ -18,7 +18,7 @@
         }
     }
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         margin: 100px 185px 0;
         padding: 0;
 
@@ -40,7 +40,7 @@
     text-align: center;
     color: $white;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         font-size: 54px;
     }
 }
@@ -68,7 +68,7 @@
         display: none;
     }
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         max-width: 540px;
 
         .desktop-only {
@@ -81,7 +81,7 @@
     max-width: 410px;
     margin: 35px auto;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         display: flex;
         margin: 70px 0 0;
         max-width: inherit;
@@ -93,7 +93,7 @@
     height: 60px;
     margin-bottom: 15px;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         margin-right: 20px;
         margin-bottom: 0;
     }
@@ -146,7 +146,7 @@
 .m-peak--form-input-email {
     z-index: 4;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         width: 400px;
     }
 }
@@ -154,7 +154,7 @@
 .m-peak--form-input-password {
     z-index: 4;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         width: 320px;
     }
 }
@@ -172,7 +172,7 @@
         outline: none;
     }
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         margin-top: 0;
         width: 230px;
     }

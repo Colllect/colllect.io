@@ -54,6 +54,9 @@
         padding-right: 30px;
     }
     @include for-tablet-landscape-up {
+        padding-top: 82px;
+    }
+    @include for-desktop-up {
         margin-right: 90px;
         padding-top: 80px;
         padding-right: 0;
@@ -118,7 +121,7 @@
     padding: 0;
     list-style: none;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         display: flex;
     }
 
@@ -127,7 +130,7 @@
         padding-bottom: 15px;
         font-family: $font-montserrat;
 
-        @include for-tablet-landscape-up {
+        @include for-desktop-up {
             padding-bottom: 0;
             font-size: 14px;
         }
@@ -138,7 +141,7 @@
             margin-right: 10px;
             transform: translateY(5px);
 
-            @include for-tablet-landscape-up {
+            @include for-desktop-up {
                 transform: translateY(3px);
             }
         }

@@ -42,7 +42,6 @@ body {
 
     @include for-tablet-portrait-up {
         margin: 0 auto;
-        max-width: 1180px;
 
         &::before {
             top: calc(-#{$body-background-height} + 620px);

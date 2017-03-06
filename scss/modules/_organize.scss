@@ -3,7 +3,6 @@
     margin-bottom: 70px;
 
     @include for-tablet-landscape-up {
-        margin-top: -60px;
         margin-bottom: 200px;
     }
     @include for-desktop-up {
@@ -17,10 +16,6 @@
 .m-organise--subtitle,
 .m-organise--title,
 .m-organise--text {
-    @include for-tablet-landscape-up {
-        width: 300px;
-        margin-left: 100px;
-    }
     @include for-desktop-up {
         width: 400px;
         margin-left: 100px;
@@ -42,7 +37,7 @@
     @media (min-width: 750px) {
         margin: 16% 370px 16% -10px;
     }
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         width: 100%;
         display: inline-block;
         margin: 30px 0 0 83px;
@@ -187,35 +182,34 @@
     @media (min-width: 750px) {
         position: absolute;
         margin-top: 30px;
+        margin-right: -15%;
+        margin-left: 0;
         top: calc(150px - 10%);
         right: 0;
-        margin-right: -15%;
         width: calc(152% - 500px);
         max-width: 520px;
         transform: none;
     }
     @include for-tablet-landscape-up {
-        position: absolute;
-        margin: 0;
-        top: 30px;
-        right: -50px;
-        width: 630px;
-        max-height: inherit;
-        max-width: inherit;
+        margin-top: 50px;
+        right: 15px;
+        width: calc(152% - 650px);
+        max-width: 620px;
     }
     @include for-desktop-up {
         top: -60px;
-        right: -75px;
+        right: 75px;
         width: 785px;
+        max-width: inherit;
     }
     @include for-mid-desktop-up {
-        top: -82px;
-        right: 6px;
+        top: -130px;
+        right: 212px;
         width: 910px;
     }
     @include for-big-desktop-up {
-        top: -82px;
-        right: 5px;
+        top: -131px;
+        right: 233px;
         width: 1000px;
     }
 }
