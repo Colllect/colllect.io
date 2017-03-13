@@ -129,6 +129,10 @@
     margin-bottom: 15px;
     font-family: $font-montserrat;
     border-radius: 50px;
+    
+    &:hover {
+        background: $chetwode-blue;
+    }
 
     @include for-desktop-up {
         display: inline-block;
@@ -137,18 +141,33 @@
         border-bottom: 2px solid $chetwode-blue;
         padding-right: 40px;
         border-radius: 0;
+        transition: border-color 150ms;
+
+        &:hover {
+            background: none;
+            border-bottom-color: $violet-red;
+
+            .m-contribute--link-arrow {
+                right: -10px;
+            }
+
+            .m-contribute--link-arrow path {
+                fill: $violet-red;
+            }
+        }
     }
 }
 
 .m-contribute--link-arrow {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    width: 10px;
+    transform: translate(0, -50%);
 
     @include for-desktop-up {
-        display: block;
-        position: absolute;
-        top: 50%;
         right: 0;
-        width: 10px;
-        transform: translate(0, -50%);
+        transition: right 350ms cubic-bezier(0, 0.69, 0.19, 1);
     }
 }

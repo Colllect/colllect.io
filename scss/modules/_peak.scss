@@ -57,10 +57,10 @@
         text-decoration: none;
         border-bottom: 2px solid $chetwode-blue;
         padding-bottom: 5px;
-        transition: color 150ms;
+        transition: border-bottom-color 150ms;
 
         &:hover {
-            color: $chetwode-blue;
+            border-bottom-color: $violet-red;
         }
     }
 

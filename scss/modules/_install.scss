@@ -197,6 +197,15 @@ $footer-height: 1000px;
         margin: 0 auto;
         border-radius: 100px;
         box-shadow: 0 10px 60px rgba($rhino, 0.5);
+        transition: box-shadow 350ms;
+
+        &:hover {
+            box-shadow: 0 10px 60px rgba($rhino, 0.8);
+
+            .m-install--arrow {
+                right: 25px;
+            }
+        }
     }
 }
 .m-install--arrow {
@@ -206,6 +215,7 @@ $footer-height: 1000px;
     width: 10px;
     opacity: 0.4;
     transform: translate(0, -55%);
+    transition: right 350ms cubic-bezier(0, 0.69, 0.19, 1);
 }
 
 .m-install--hexagonal-inner {
