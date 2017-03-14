@@ -16,9 +16,19 @@
             <img src="images/logo.svg" alt="Collect.io">
             <sup class="m-header--logo-version">alpha</sup>
         </div>
-        <div class="m-header--logbox">
-            <a href="#todo" class="m-header--logbox-button">Log in</a>
-            <a href="#todo" class="m-header--logbox-button m-header--logbox-button-highlight">Sign up</a>
+        <div class="m-header--share">
+            <div class="m-header--share-label">Share it</div>
+            <a href="#todo-twitter" class="m-header--share-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-header--share-picto">
+                    <path fill="#ffffff" d="M32 6.4c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2 2.9-3.5-1.3.7-2.7 1.3-4.2 1.5-1.2-1.2-2.9-2-4.8-2-3.6 0-6.6 2.9-6.6 6.4 0 .5.1 1 .2 1.5-5.4-.4-10.2-2.9-13.5-6.8-.6.9-.9 2-.9 3.2 0 2.2 1.2 4.2 2.9 5.3-1.1 0-2.1-.3-3-.8v.1c0 3.1 2.3 5.7 5.3 6.3-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.5 3.3 4.4 6.1 4.4-2.2 1.7-5.1 2.7-8.2 2.7-.5 0-1.1 0-1.6-.1 2.9 1.8 6.4 2.9 10.1 2.9 12.1 0 18.7-9.7 18.7-18.2v-.8c1.3-.8 2.4-2 3.3-3.2z" class="st0"/>
+                </svg>
+            </a>
+            <a href="#todo-fb" class="m-header--share-button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-header--share-picto">
+                    <path fill="#ffffff" d="M11.8,31.9h6.7V16H23l0.6-5.5h-5.1l0-2.7c0-1.4,0.1-2.2,2.2-2.2h2.8V0.1H19c-5.4,0-7.2,2.7-7.2,7.1v3.3H8.5V16
+                        h3.3V31.9z"/>
+                </svg>
+            </a>
         </div>
     </header>
 
@@ -42,18 +52,34 @@
                 </span>
             </h1>
             <p class="m-hero--subtitle">
-                Manage your inspiration and resources into collections. <br>
-                Store your content where ever you want.
+                Our Open Source service helps you gather your
+                inspiration and resources.
+                Store your bookmarks where it fits you.
             </p>
-            <a class="m-hero--button button--give-a-try" href="#todo">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="button--give-a-try--item-arrow">
-                    <path class="button--give-a-try--item-arrow-spike" fill="#ffffff"
-                          d="M31.2,14L18.7,1.6c-1.1-1.1-3-1.1-4.1,0c-1.1,1.1-1.1,2.9,0,4.1L25,16L14.6,26.3c-1.1,1.1-1.1,2.9,0,4.1 c1.1,1.1,3,1.1,4.1,0L31.2,18c0.6-0.6,0.9-1.3,0.8-2C32,15.3,31.7,14.5,31.2,14z"/>
-                    <path class="button--give-a-try--item-arrow-dash" fill="#ffffff"
-                          d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
-                </svg>
-                Give a try
-            </a>
+            <form action="#todo" class="m-hero--form">
+                <div class="m-hero--form-input m-hero--form-input-email">
+                    <input type="email" id="hero-email" name="email" required>
+                    <label for="hero-email">E-mail</label>
+                    <span class="m-hero--form-input-icon m-hero--form-input-icon-error">&#10006;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9" class="m-hero--form-input-icon m-hero--form-input-icon-mail">
+                        <path d="M31.7,1.9c-0.2-0.6-0.6-1-1.1-1.4C30.1,0.2,29.5,0,28.8,0H3.2C2.7,0,2.3,0.1,1.9,0.3c-0.6,0.2-1,0.6-1.4,1.1
+                                    C0.2,1.9,0,2.5,0,3.2v14.6c0,0.4,0.1,0.9,0.3,1.2c0.2,0.6,0.6,1,1.1,1.4c0.5,0.3,1.1,0.5,1.8,0.5h25.7c0.4,0,0.9-0.1,1.2-0.3
+                                    c0.6-0.2,1-0.6,1.4-1.1c0.3-0.5,0.5-1.1,0.5-1.8V3.2C32,2.7,31.9,2.3,31.7,1.9z M16.7,9.5c-0.2,0.1-0.4,0.2-0.7,0.2
+                                    c-0.2,0-0.5-0.1-0.7-0.2L5.7,3h20.6L16.7,9.5z M29,17.8C29,17.8,28.9,17.9,29,17.8c-0.1,0.1-0.1,0.1-0.1,0.1H3.2c0,0,0,0,0,0
+                                    c0,0,0,0-0.1-0.1c0,0,0,0,0-0.1V4.8l10.7,7.3l0,0c0.7,0.4,1.5,0.6,2.2,0.6c0.8,0,1.5-0.2,2.2-0.6l0,0L29,4.9L29,17.8
+                                    C29,17.8,29,17.8,29,17.8z"/>
+                    </svg>
+                </div>
+                <button type="submit" class="m-hero--form-button button--give-a-try">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="button--give-a-try--item-arrow">
+                        <path class="button--give-a-try--item-arrow-spike" fill="#ffffff"
+                              d="M31.2,14L18.7,1.6c-1.1-1.1-3-1.1-4.1,0c-1.1,1.1-1.1,2.9,0,4.1L25,16L14.6,26.3c-1.1,1.1-1.1,2.9,0,4.1 c1.1,1.1,3,1.1,4.1,0L31.2,18c0.6-0.6,0.9-1.3,0.8-2C32,15.3,31.7,14.5,31.2,14z"/>
+                        <path class="button--give-a-try--item-arrow-dash" fill="#ffffff"
+                              d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
+                    </svg>
+                    Notify me
+                </button>
+            </form>
         </section>
 
         <div class="m-hero--shapes">
@@ -667,9 +693,9 @@
                     Save all your inspiration
                 </h2>
                 <p class="m-main--text">
-                    Inspiration comes in many ways and you like to save everything for the internet.
-                    Collect.io allow you to keep all of your inspiration at the same place
-                    from pictures to links, texts&nbsp;and&nbsp;colors.
+                    Inspiration comes in many ways and you like to save everything for the Internet.
+                    Collect.io helps you keep your inspiration at
+                    the same place from pictures to links, texts&nbsp;and&nbsp;colors.
                 </p>
             </div>
             <div class="m-inspiration--elements-outer">
@@ -1096,7 +1122,7 @@
                               d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
                     </svg>
                     <strong>Tag manager</strong>
-                    Use tag to organise your files
+                    Use tag to organise your inspiration
                 </button>
                 <button type="button" class="m-organise--menu-item" data-state-name="multiple-selection">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-organise--menu-item-arrow">
@@ -1129,8 +1155,8 @@
                 Take control <br> over your interface
             </h2>
             <p class="m-main--text m-control--text">
-                We wanted our users to have a total contol on the interface.
-                You will be either able to choose where you want to put Collect
+                We wanted our users to have a total control over their Collect.
+                You will either be able to choose where you want to host Collect
                 and what storage you want&nbsp;to&nbsp;use.
             </p>
 
@@ -1146,8 +1172,8 @@
                         </span>
                         <p>
                             We let you decide how autonomous you want to be,
-                            you can directly log in here and use our interface,
-                            or use your own&nbsp;domain&nbsp;name.
+                            you can directly log in here and use our domain,
+                            or use&nbsp;your&nbsp;own.
                         </p>
                         <ul class="m-control--dots">
                             <li>
@@ -1162,7 +1188,7 @@
                                     <path fill="#F3A0A7"
                                           d="M24.6 26.2l-8 4.9c-1.8 1.1-4 1.1-5.7 0l-8-4.9C1.1 25.1 0 23.1 0 20.9V11c0-2.2 1.1-4.2 2.9-5.3l8-4.9c1.8-1.1 4-1.1 5.7 0l8 4.9c1.8 1.1 2.9 3.1 2.9 5.3v9.9c0 2.2-1.1 4.2-2.9 5.3z"/>
                                 </svg>
-                                Localhost
+                                Collect.io
                             </li>
                         </ul>
                     </div>
@@ -1244,7 +1270,7 @@
                       d="M1346.7,538.2l-944.1,552.5c-34,19.6-75.9,19.6-109.9,0l-153.2-88.5c-34-19.6-54.9-56-54.9-95.2V729.9 c0-39.3,20.9-75.6,54.9-95.2l944.2-552.6c34-19.6,75.9-19.6,109.9,0l153.1,88.5c34,19.6,54.9,56,54.9,95.2v177 C1401.6,482.2,1380.7,518.5,1346.7,538.2z"/>
             </svg>
 
-            <div class="m-install--ui">
+            <div class="m-install--ui slide-on-scroll">
                 <img src="images/install/ui.png" alt="">
             </div>
 
@@ -1295,99 +1321,6 @@
                             Download and install an instance of Collect.io on your personal server.
                             Never loose your files again!
                         </p>
-                        <a href="#todo" class="m-install--button">
-                            Download
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-install--arrow">
-                                <path fill="#6671D3"
-                                      d="M31.2,14L18.7,1.6c-1.1-1.1-3-1.1-4.1,0c-1.1,1.1-1.1,2.9,0,4.1L25,16L14.6,26.3c-1.1,1.1-1.1,2.9,0,4.1 c1.1,1.1,3,1.1,4.1,0L31.2,18c0.6-0.6,0.9-1.3,0.8-2C32,15.3,31.7,14.5,31.2,14z"/>
-                                <path fill="#6671D3"
-                                      d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </section>
-
-                <section class="m-contribute m-main--wrapper">
-                    <strong class="m-contribute--title">
-                        Want&nbsp;to contribute?
-                    </strong>
-                    <div class="m-contribute--columns">
-                        <div class="m-contribute--column">
-                            <strong class="m-contribute--column-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.5 32">
-                                    <path fill="#7b80de"
-                                          d="M24.6 26.2l-8 4.9c-1.8 1.1-4 1.1-5.7 0l-8-4.9C1.1 25.1 0 23.1 0 20.9V11c0-2.2 1.1-4.2 2.9-5.3l8-4.9c1.8-1.1 4-1.1 5.7 0l8 4.9c1.8 1.1 2.9 3.1 2.9 5.3v9.9c0 2.2-1.1 4.2-2.9 5.3z"></path>
-                                </svg>
-                                Something strange
-                            </strong>
-                            <p class="m-contribute--column-content">
-                                Report anything that is not working.
-                            </p>
-                            <a href="https://github.com/Collect-io/Collect.io/issues/new" class="m-contribute--link">
-                                Tell us
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                                     class="m-contribute--link-arrow">
-                                    <path fill="#c9caea"
-                                          d="M31.2,14L18.7,1.6c-1.1-1.1-3-1.1-4.1,0c-1.1,1.1-1.1,2.9,0,4.1L25,16L14.6,26.3c-1.1,1.1-1.1,2.9,0,4.1 c1.1,1.1,3,1.1,4.1,0L31.2,18c0.6-0.6,0.9-1.3,0.8-2C32,15.3,31.7,14.5,31.2,14z"/>
-                                    <path fill="#c9caea"
-                                          d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="m-contribute--column">
-                            <strong class="m-contribute--column-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.5 32">
-                                    <path fill="#7b80de"
-                                          d="M24.6 26.2l-8 4.9c-1.8 1.1-4 1.1-5.7 0l-8-4.9C1.1 25.1 0 23.1 0 20.9V11c0-2.2 1.1-4.2 2.9-5.3l8-4.9c1.8-1.1 4-1.1 5.7 0l8 4.9c1.8 1.1 2.9 3.1 2.9 5.3v9.9c0 2.2-1.1 4.2-2.9 5.3z"></path>
-                                </svg>
-                                Open Source
-                            </strong>
-                            <p class="m-contribute--column-content">
-                                You want to add a feature, or just want to give us a hand ?
-                            </p>
-                            <a href="https://github.com/Collect-io/Collect.io" class="m-contribute--link">
-                                Check on GitHub
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                                     class="m-contribute--link-arrow">
-                                    <path fill="#c9caea"
-                                          d="M31.2,14L18.7,1.6c-1.1-1.1-3-1.1-4.1,0c-1.1,1.1-1.1,2.9,0,4.1L25,16L14.6,26.3c-1.1,1.1-1.1,2.9,0,4.1 c1.1,1.1,3,1.1,4.1,0L31.2,18c0.6-0.6,0.9-1.3,0.8-2C32,15.3,31.7,14.5,31.2,14z"/>
-                                    <path fill="#c9caea"
-                                          d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
-                                </svg>
-                            </a> <br>
-                            <a href="#todo" class="m-contribute--link">
-                                Style Guides
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                                     class="m-contribute--link-arrow">
-                                    <path fill="#c9caea"
-                                          d="M31.2,14L18.7,1.6c-1.1-1.1-3-1.1-4.1,0c-1.1,1.1-1.1,2.9,0,4.1L25,16L14.6,26.3c-1.1,1.1-1.1,2.9,0,4.1 c1.1,1.1,3,1.1,4.1,0L31.2,18c0.6-0.6,0.9-1.3,0.8-2C32,15.3,31.7,14.5,31.2,14z"/>
-                                    <path fill="#c9caea"
-                                          d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
-                                </svg>
-                            </a>
-                        </div>
-                        <div class="m-contribute--column">
-                            <strong class="m-contribute--column-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.5 32">
-                                    <path fill="#7b80de"
-                                          d="M24.6 26.2l-8 4.9c-1.8 1.1-4 1.1-5.7 0l-8-4.9C1.1 25.1 0 23.1 0 20.9V11c0-2.2 1.1-4.2 2.9-5.3l8-4.9c1.8-1.1 4-1.1 5.7 0l8 4.9c1.8 1.1 2.9 3.1 2.9 5.3v9.9c0 2.2-1.1 4.2-2.9 5.3z"></path>
-                                </svg>
-                                Donation
-                            </strong>
-                            <p class="m-contribute--column-content">
-                                Because you want to contribute other than with love.
-                            </p>
-                            <a href="#todo" class="m-contribute--link">
-                                Tip us
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
-                                     class="m-contribute--link-arrow">
-                                    <path fill="#c9caea"
-                                          d="M31.2,14L18.7,1.6c-1.1-1.1-3-1.1-4.1,0c-1.1,1.1-1.1,2.9,0,4.1L25,16L14.6,26.3c-1.1,1.1-1.1,2.9,0,4.1 c1.1,1.1,3,1.1,4.1,0L31.2,18c0.6-0.6,0.9-1.3,0.8-2C32,15.3,31.7,14.5,31.2,14z"/>
-                                    <path fill="#c9caea"
-                                          d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </section>
             </div>
@@ -1395,38 +1328,23 @@
 
         <section class="m-peak m-main--wrapper">
             <strong class="m-peak--title">
-                Take a peak
+                Be notified
             </strong>
             <p class="m-peak--text">
-                You can try Collect.io just by signing up for free. You will be allow to store
-                50MB of data.
-                <span class="desktop-only">You can plug your Dropbox or <a href="#todo">download and install</a> Collect.io</span>
+                Enter you email address to be notified of the launch
             </p>
             <form action="#todo" class="m-peak--form">
                 <div class="m-peak--form-input m-peak--form-input-email">
-                    <input type="email" id="peak-email" name="email">
+                    <input type="email" id="peak-email" name="email" required>
                     <label for="peak-email">E-mail</label>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9" class="m-peak--form-input-icon">
+                    <span class="m-peak--form-input-icon m-peak--form-input-icon-error">&#10006;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9" class="m-peak--form-input-icon m-peak--form-input-icon-mail">
                         <path d="M31.7,1.9c-0.2-0.6-0.6-1-1.1-1.4C30.1,0.2,29.5,0,28.8,0H3.2C2.7,0,2.3,0.1,1.9,0.3c-0.6,0.2-1,0.6-1.4,1.1
                                     C0.2,1.9,0,2.5,0,3.2v14.6c0,0.4,0.1,0.9,0.3,1.2c0.2,0.6,0.6,1,1.1,1.4c0.5,0.3,1.1,0.5,1.8,0.5h25.7c0.4,0,0.9-0.1,1.2-0.3
                                     c0.6-0.2,1-0.6,1.4-1.1c0.3-0.5,0.5-1.1,0.5-1.8V3.2C32,2.7,31.9,2.3,31.7,1.9z M16.7,9.5c-0.2,0.1-0.4,0.2-0.7,0.2
                                     c-0.2,0-0.5-0.1-0.7-0.2L5.7,3h20.6L16.7,9.5z M29,17.8C29,17.8,28.9,17.9,29,17.8c-0.1,0.1-0.1,0.1-0.1,0.1H3.2c0,0,0,0,0,0
                                     c0,0,0,0-0.1-0.1c0,0,0,0,0-0.1V4.8l10.7,7.3l0,0c0.7,0.4,1.5,0.6,2.2,0.6c0.8,0,1.5-0.2,2.2-0.6l0,0L29,4.9L29,17.8
                                     C29,17.8,29,17.8,29,17.8z"/>
-                    </svg>
-                </div>
-                <div class="m-peak--form-input m-peak--form-input-password">
-                    <input type="password" id="peak-password" name="password">
-                    <label for="peak-password">Password</label>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9" class="m-peak--form-input-icon">
-                        <path d="M25.2,9.6c-0.3-0.6-0.7-1-1.2-1.4c-0.5-0.3-1.1-0.5-1.8-0.5h-0.1c0-1-0.2-1.9-0.5-2.8
-                                    c-0.2-0.7-0.5-1.3-0.8-1.9c-0.5-0.8-1.2-1.6-2.1-2.2c-0.4-0.3-0.8-0.5-1.4-0.7c-0.5-0.1-1-0.2-1.5-0.2c-0.9,0-1.8,0.3-2.6,0.7
-                                    c-0.6,0.3-1.1,0.7-1.6,1.2c-0.7,0.7-1.2,1.6-1.6,2.6c-0.3,1-0.5,2-0.6,3.1c-0.3,0-0.7,0.1-1,0.3c-0.6,0.3-1,0.7-1.4,1.2
-                                    c-0.3,0.5-0.5,1.1-0.5,1.8v6.9c0,0.5,0.1,0.8,0.3,1.2c0.3,0.6,0.7,1,1.2,1.4c0.5,0.4,1.1,0.6,1.8,0.6h12.4c0.5,0,0.8-0.1,1.2-0.3
-                                    c0.6-0.3,1-0.7,1.4-1.2s0.5-1.1,0.5-1.8v-6.9C25.4,10.4,25.4,10,25.2,9.6z M13,5.8c0.1-0.5,0.3-0.8,0.5-1.2c0.3-0.5,0.7-0.9,1.1-1.2
-                                    c0.2-0.1,0.4-0.2,0.6-0.3c0.2-0.1,0.4-0.1,0.7-0.1c0.2,0,0.4,0,0.6,0.1c0.3,0.1,0.7,0.3,1,0.5c0.5,0.4,0.9,0.9,1.2,1.6
-                                    c0.3,0.7,0.5,1.5,0.5,2.4h-6.5C12.6,7,12.8,6.3,13,5.8z M20.9,18.2h-9.8c-0.8,0-1.5-0.7-1.5-1.5v-4.5c0-0.8,0.7-1.5,1.5-1.5h9.7
-                                    c0.8,0,1.5,0.7,1.5,1.5v4.5C22.4,17.5,21.7,18.2,20.9,18.2z"/>
                     </svg>
                 </div>
                 <button type="submit" class="m-peak--form-button button--give-a-try">
@@ -1436,7 +1354,7 @@
                         <path class="button--give-a-try--item-arrow-dash" fill="#ffffff"
                               d="M2.3,13h22.9c1.3,0,2.3,1,2.3,2.3v1.5c0,1.3-1,2.3-2.3,2.3H2.3c-1.3,0-2.3-1-2.3-2.3v-1.5C0,14.1,1,13,2.3,13z"/>
                     </svg>
-                    Give a try
+                    Notify me
                 </button>
             </form>
         </section>
@@ -1461,23 +1379,6 @@
             <ul class="m-footer--columns">
                 <li>
                     <span class="m-footer--column-title">
-                        Informations
-                    </span>
-                    <ul>
-                        <li>
-                            <a href="#todo">
-                                Documentation
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#todo">
-                                Blog
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="m-footer--column-title">
                         Built by
                     </span>
                     <ul>
@@ -1493,6 +1394,7 @@
                         </li>
                     </ul>
                 </li>
+                <li></li>
                 <li>
                     <span class="m-footer--column-title">
                         Follow Us

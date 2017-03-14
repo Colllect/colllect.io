@@ -31,6 +31,11 @@
         img {
             width: 100%;
             box-shadow: 0 5px 29px rgba($shark, 0.25);
+            transition: margin-top 500ms;
+        }
+
+        &.rewind-slide img {
+            margin-top: 200px;
         }
     }
 }
@@ -61,13 +66,14 @@
     }
 }
 
-$footer-height: 1000px;
+$footer-height: 750px;
 .m-install--background-shapes {
     position: absolute;
     left: 0;
     right: 0;
     overflow: hidden;
     height: calc(24vw + #{$footer-height});
+    pointer-events: none;
 
     @include for-tablet-landscape-up {
         height: calc(24vw + #{$footer-height * 2});
@@ -156,6 +162,10 @@ $footer-height: 1000px;
 
     @include for-tablet-portrait-up {
         margin: 50px auto 25px;
+    }
+
+    @include for-desktop-up {
+        margin: 110px auto 25px;
     }
 }
 .m-install--title {

@@ -50,6 +50,7 @@
     }
     @include for-desktop-up {
         font-size: 14px;
+        line-height: 28px;
         margin: 20px 0 35px;
     }
     @include for-mid-desktop-up {
@@ -58,8 +59,105 @@
     }
 }
 
-.m-hero--button {
+.m-hero--form {
+    max-width: 400px;
     animation: heroSlideUp 1.9s cubic-bezier(0, 0.69, 0.19, 1);
+
+    @include for-desktop-up {
+        display: flex;
+        max-width: 530px;
+    }
+}
+
+.m-hero--form-input {
+    position: relative;
+    height: 60px;
+    margin-bottom: 15px;
+
+    @include for-desktop-up {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    input {
+        height: 100%;
+        width: 100%;
+        font-family: $font-montserrat;
+        color: $regent-gray;
+        background: $shark;
+        padding: 0 100px 0 70px;
+        border-radius: 60px;
+        border: none;
+        background: $white;
+
+        &.m-hero--form-input__filled,
+        &:focus {
+            outline: none;
+
+            & ~ label {
+                opacity: 0;
+            }
+
+            & ~ .m-hero--form-input-icon {
+                fill: $violet-red;
+            }
+        }
+
+        & ~ .m-hero--form-input-icon-error {
+            display: none;
+            top: 21px;
+            color: #f72b3e;
+        }
+
+        &.m-hero--form-input__filled:invalid {
+            color: #f72b3e;
+        }
+
+        &.m-hero--form-input__filled:invalid ~ .m-hero--form-input-icon-mail {
+            display: none;
+        }
+        &.m-hero--form-input__filled:invalid ~ .m-hero--form-input-icon-error {
+            display: block;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 0;
+        left: 70px;
+        line-height: 62px;
+        color: $regent-gray;
+        font-family: $font-montserrat;
+        font-size: 14px;
+        pointer-events: none;
+    }
+}
+
+.m-hero--form-input-icon {
+    position: absolute;
+    top: 25px;
+    left: 37px;
+    width: 18px;
+    fill: $regent-gray;
+    color: $regent-gray;
+}
+
+.m-hero--form-input-email {
+    z-index: 4;
+
+    @include for-desktop-up {
+        width: 400px;
+    }
+}
+
+.m-hero--form-button {
+    width: 100%;
+
+    @include for-desktop-up {
+        width: auto;
+        margin-left: -100px;
+        z-index: 4;
+    }
 }
 
 .m-hero--title-line {
@@ -104,12 +202,12 @@
     animation: shapeUnderSlideIn 1.2s cubic-bezier(0, 0.69, 0.19, 1);
 
     @include for-tablet-portrait-up {
-        top: -40vw;
+        top: -45vw;
         left: 30%;
         width: 100%;
     }
     @include for-tablet-landscape-up {
-        top: -45vw;
+        top: -55vw;
         left: 50%;
     }
     @include for-desktop-up {

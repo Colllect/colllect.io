@@ -3,19 +3,26 @@
     display: inline-block;
     background-color: $violet-red;
     color: $white;
-    padding: 18px 80px;
+    padding: 22px 80px;
     font-family: $font-montserrat;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
     text-decoration: none;
+    border: none;
     border-radius: 50px;
+    cursor: pointer;
+    white-space: nowrap;
     box-shadow: 0 5px 50px rgba($violet-red, 0.7);
     transition: background-color 150ms, box-shadow 150ms;
 
     @include for-desktop-up {
         font-size: 16px;
-        padding: 25px 80px;
+        padding: 20px 80px;
         box-shadow: 0 0 87px rgba($violet-red, 0.75);
+    }
+
+    &:focus {
+        outline: none;
     }
 
     &:hover {

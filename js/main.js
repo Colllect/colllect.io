@@ -3,7 +3,6 @@ if (isSafari) {
   document.documentElement.classList.add('is-safari');
 }
 
-
 function each (domElementList, callback) {
   for (var i = 0; i < domElementList.length; i += 1) {
     callback(domElementList[ i ]);
@@ -38,20 +37,48 @@ each(organiseMenuItems, function (item) {
 
 //////////////
 // TAKE A PEAK
+var heroFormFields = document.querySelectorAll('.m-hero--form-input input');
 var peakFormFields = document.querySelectorAll('.m-peak--form-input input');
-var focusedField = 'm-peak--form-input__filled';
+var focusedFieldHero = 'm-hero--form-input__filled';
+var focusedFieldPeak = 'm-peak--form-input__filled';
 
-function manageInputStateChange () {
+function manageInputStateChange (focusedClassName) {
   if (this.value.trim() !== "") {
-    if (!this.classList.contains(focusedField)) {
-      this.classList.add(focusedField);
+    if (!this.classList.contains(focusedClassName)) {
+      this.classList.add(focusedClassName);
     }
   } else {
-    this.classList.remove(focusedField);
+    this.classList.remove(focusedClassName);
   }
 }
 
-each(peakFormFields, function (field) {
-  field.addEventListener('blur', manageInputStateChange);
+each(heroFormFields, function (field) {
+  field.addEventListener('blur', function () {
+    manageInputStateChange.call(this, focusedFieldHero)
+  });
 });
 
+each(peakFormFields, function (field) {
+  field.addEventListener('blur', function () {
+    manageInputStateChange.call(this, focusedFieldPeak)
+  });
+});
+
+/////////////////////
+// SLIDE IN ON SCROLL
+function slideOnScroll () {
+  var elements = document.querySelectorAll('.slide-on-scroll');
+  for (var i = 0; i < elements.length; i += 1) {
+    var elementRect = elements[ i ].getBoundingClientRect();
+
+    if (elementRect.top - window.innerHeight + 200 < 0) {
+      elements[ i ].classList.remove('rewind-slide');
+    } else if (elementRect.top - window.innerHeight - 20 > 0) {
+      elements[ i ].classList.add('rewind-slide');
+    }
+  }
+}
+
+window.addEventListener('scroll', slideOnScroll);
+window.addEventListener('resize', slideOnScroll);
+slideOnScroll();

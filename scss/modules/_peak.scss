@@ -1,34 +1,15 @@
 .m-peak {
     position: relative;
-    margin: 0;
+    margin: 50px 0 0;
     padding: 0 20px 50px;
-    background: $shark;
-
-    &::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        margin: -50px auto 50px;
-        max-width: calc(420px + ((100% - 420px)/ 2));
-        background: #282a2d;
-
-        @include for-desktop-up {
-            max-width: inherit;
-        }
-    }
 
     @include for-desktop-up {
-        margin: 100px 185px 0;
+        margin: 400px 185px 0;
         padding: 0;
-
-        &::before {
-            display: none;
-        }
     }
 
     @include for-mid-desktop-up {
-        margin: 100px 270px 0;
+        margin: 400px 270px 0;
     }
 }
 
@@ -48,7 +29,7 @@
 .m-peak--text {
     color: $shuttle-gray;
     max-width: 410px;
-    margin: 30px auto;
+    margin: 15px auto 30px;
     text-align: center;
     line-height: 28px;
 
@@ -78,13 +59,12 @@
 }
 
 .m-peak--form {
-    max-width: 410px;
+    max-width: 540px;
     margin: 35px auto;
 
     @include for-desktop-up {
         display: flex;
-        margin: 70px 0 0;
-        max-width: inherit;
+        margin: 70px auto 0;
     }
 }
 
@@ -102,15 +82,15 @@
         height: 100%;
         width: 100%;
         font-family: $font-montserrat;
-        color: $white;
+        color: $regent-gray;
         background: $shark;
-        padding: 0 30px 0 70px;
-        border: 2px solid $abbey;
+        padding: 0 100px 0 70px;
         border-radius: 60px;
+        border: none;
+        background: $white;
 
         &.m-peak--form-input__filled,
         &:focus {
-            border-color: $chetwode-blue;
             outline: none;
 
             & ~ label {
@@ -118,8 +98,25 @@
             }
 
             & ~ .m-peak--form-input-icon {
-                fill: $chetwode-blue;
+                fill: $violet-red;
             }
+        }
+
+        & ~ .m-peak--form-input-icon-error {
+            display: none;
+            top: 21px;
+            color: #f72b3e;
+        }
+
+        &.m-peak--form-input__filled:invalid {
+            color: #f72b3e;
+        }
+
+        &.m-peak--form-input__filled:invalid ~ .m-peak--form-input-icon-mail {
+            display: none;
+        }
+        &.m-peak--form-input__filled:invalid ~ .m-peak--form-input-icon-error {
+            display: block;
         }
     }
 
@@ -128,7 +125,7 @@
         top: 0;
         left: 70px;
         line-height: 62px;
-        color: $white;
+        color: $regent-gray;
         font-family: $font-montserrat;
         font-size: 14px;
         pointer-events: none;
@@ -140,7 +137,7 @@
     top: 25px;
     left: 37px;
     width: 18px;
-    fill: $abbey;
+    fill: $regent-gray;
 }
 
 .m-peak--form-input-email {
@@ -151,29 +148,14 @@
     }
 }
 
-.m-peak--form-input-password {
-    z-index: 4;
-
-    @include for-desktop-up {
-        width: 320px;
-    }
-}
-
 .m-peak--form-button {
-    border: none;
-    cursor: pointer;
-    height: 60px;
-    padding: 20px 0;
     margin-top: 15px;
     width: 100%;
-    z-index: 3;
-
-    &:focus {
-        outline: none;
-    }
+    z-index: 5;
 
     @include for-desktop-up {
         margin-top: 0;
-        width: 230px;
+        margin-left: -100px;
+        width: 240px;
     }
 }

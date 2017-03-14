@@ -21,6 +21,7 @@
         width: 100%;
     }
 }
+
 .m-header--logo-version {
     position: absolute;
     top: 5px;
@@ -29,39 +30,44 @@
     font-size: 13px;
 }
 
-.m-header--logbox {
-    display: none;
+.m-header--share {
+    display: block;
+    position: absolute;
+    top: 27px;
+    right: 50px;
 }
-@include for-tablet-portrait-up {
-    .m-header--logbox {
-        display: block;
-        position: absolute;
-        top: 27px;
-        right: 50px;
-    }
-    .m-header--logbox-button {
-        display: inline-block;
-        text-decoration: none;
-        color: $regent-gray;
-        border-radius: 20px;
-        font-size: 16px;
-        height: 35px;
-        line-height: 35px;
-        padding: 0 25px;
-        transition: color 300ms, background 300ms;
 
-        &:hover {
-            color: $white;
-            background: lighten($chetwode-blue, 5%);
-        }
-    }
-    .m-header--logbox-button-highlight {
-        color: $white;
-        background-color: $chetwode-blue;
+.m-header--share-label {
+    display: inline-block;
+    height: 34px;
+    line-height: 30px;
+    color: $regent-gray;
+    vertical-align: top;
+    padding-top: 2px;
+}
+
+.m-header--share-button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 100%;
+    height: 34px;
+    width: 34px;
+    padding: 7px;
+    margin-left: 7px;
+    border: 2px solid $chetwode-blue;
+    transition: background 300ms;
+
+    &:hover {
+        background: $chetwode-blue;
     }
 }
+
+.m-header--share-picto {
+    width: 100%;
+}
+
 @include for-desktop-up {
-    .m-header--logbox {
+    .m-header--share {
         top: 50px;
         right: 185px;
     }
