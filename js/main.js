@@ -82,3 +82,37 @@ function slideOnScroll () {
 window.addEventListener('scroll', slideOnScroll);
 window.addEventListener('resize', slideOnScroll);
 slideOnScroll();
+
+////////
+// FORMS
+var formSubitedOk = false;
+
+function onSubmit(e) {
+  var form = this;
+
+  e.preventDefault();
+  if (formSubitedOk) {
+    return;
+  }
+
+  form.querySelector('input').disabled = true;
+
+  var req = new XMLHttpRequest();
+  req.open('POST', 'subscribe.php', true);
+  req.onreadystatechange = function () {
+    if (req.readyState === 4) {
+      if (req.status === 200) {
+        formSubitedOk = true;
+        form.querySelector('input').classList.add('submitted');
+        form.querySelector('button').disabled = false
+      } else {
+        document.querySelector('class~="form-input-icon-error"').style.display = 'block';
+        document.querySelector('class~="form-input-icon-mail"').style.display = 'none';
+        form.querySelector('input').disabled = false;
+      }
+    }
+  };
+  req.send(new FormData(form));
+}
+document.querySelector('.m-hero--form').addEventListener('submit', onSubmit, false);
+document.querySelector('.m-peak--form').addEventListener('submit', onSubmit, false);
