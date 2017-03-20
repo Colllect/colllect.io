@@ -88,7 +88,8 @@ slideOnScroll();
 var formSubitedOk = false;
 
 function onSubmit(e) {
-  var form = this;
+  var form = this,
+    formClass = form.classList[0];
 
   e.preventDefault();
   if (formSubitedOk) {
@@ -104,15 +105,20 @@ function onSubmit(e) {
       if (req.status === 200) {
         formSubitedOk = true;
         form.querySelector('input').classList.add('submitted');
-        form.querySelector('button').disabled = false
+        form.querySelector('.' + formClass + '-input-icon-success').style.display = 'block';
+        form.querySelector('.' + formClass + '-input-icon-error').style.display = 'none';
+        form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'none';
+        form.querySelector('button').disabled = false;
       } else {
-        document.querySelector('class~="form-input-icon-error"').style.display = 'block';
-        document.querySelector('class~="form-input-icon-mail"').style.display = 'none';
+        form.querySelector('.' + formClass + '-input-icon-error').style.display = 'block';
+        form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'none';
         form.querySelector('input').disabled = false;
       }
     }
   };
-  req.send(new FormData(form));
+  var formData = new FormData(form);
+  formData.append('email', form.querySelector('input').value);
+  req.send(formData);
 }
 document.querySelector('.m-hero--form').addEventListener('submit', onSubmit, false);
 document.querySelector('.m-peak--form').addEventListener('submit', onSubmit, false);

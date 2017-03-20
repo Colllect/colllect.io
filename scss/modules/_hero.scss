@@ -142,6 +142,10 @@
     color: $regent-gray;
 }
 
+.m-hero--form-input-icon-success {
+    display: none;
+}
+
 .m-hero--form-input-email {
     z-index: 4;
 
@@ -172,9 +176,11 @@
 .m-hero--title-line-one .m-hero--title-line-inner {
     animation: heroTitleSlideIn 1.5s cubic-bezier(0, 0.69, 0.19, 1);
 }
+
 .m-hero--title-line-two .m-hero--title-line-inner {
     animation: heroTitleSlideIn 1.8s cubic-bezier(0, 0.69, 0.19, 1);
 }
+
 .m-hero--title-line-three .m-hero--title-line-inner {
     animation: heroTitleSlideIn 2s cubic-bezier(0, 0.69, 0.19, 1);
 }
