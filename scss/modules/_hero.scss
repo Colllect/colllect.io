@@ -111,8 +111,6 @@
 
         & ~ .m-hero--form-input-icon-error {
             display: none;
-            top: 21px;
-            color: #f72b3e;
         }
 
         &.m-hero--form-input__filled:invalid {
@@ -144,6 +142,7 @@
     top: 25px;
     left: 37px;
     width: 18px;
+    height: 12px;
     fill: $regent-gray;
     color: $regent-gray;
 }

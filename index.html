@@ -33,14 +33,14 @@
         <div class="m-header--share">
             <div class="m-header--share-label">Share it</div>
             <a href="https://twitter.com/intent/tweet?text=Check%20out%20Collect.io%20%E2%80%94%20Your%20Open%20Source%20visual%20bookmark%20manager%0a&url=http://getcollect.io&via=getcollectio"
-               class="m-header--share-button">
+               class="m-header--share-button" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-header--share-picto">
                     <path fill="#ffffff"
                           d="M32 6.4c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2 2.9-3.5-1.3.7-2.7 1.3-4.2 1.5-1.2-1.2-2.9-2-4.8-2-3.6 0-6.6 2.9-6.6 6.4 0 .5.1 1 .2 1.5-5.4-.4-10.2-2.9-13.5-6.8-.6.9-.9 2-.9 3.2 0 2.2 1.2 4.2 2.9 5.3-1.1 0-2.1-.3-3-.8v.1c0 3.1 2.3 5.7 5.3 6.3-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.5 3.3 4.4 6.1 4.4-2.2 1.7-5.1 2.7-8.2 2.7-.5 0-1.1 0-1.6-.1 2.9 1.8 6.4 2.9 10.1 2.9 12.1 0 18.7-9.7 18.7-18.2v-.8c1.3-.8 2.4-2 3.3-3.2z"
                           class="st0"/>
                 </svg>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://getcollect.io/" class="m-header--share-button">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://getcollect.io/" class="m-header--share-button" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-header--share-picto">
                     <path fill="#ffffff" d="M11.8,31.9h6.7V16H23l0.6-5.5h-5.1l0-2.7c0-1.4,0.1-2.2,2.2-2.2h2.8V0.1H19c-5.4,0-7.2,2.7-7.2,7.1v3.3H8.5V16
                         h3.3V31.9z"/>
@@ -85,7 +85,9 @@
                         <path fill="#35d316"
                               d="M29.4.7c-.8-.8-2.1-.8-2.8 0L11.5 16l-6.1-5.9c-.8-.8-2.1-.7-2.8.1-.8.8-.8 2.1 0 2.8l7.5 7.2c.8.8 2 .7 2.8 0L29.4 3.5c.8-.8.8-2 0-2.8z"/>
                     </svg>
-                    <span class="m-hero--form-input-icon m-hero--form-input-icon-error">&#10006;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9" class="m-hero--form-input-icon m-hero--form-input-icon-error">
+                        <polygon points="25.8,4 22.5,0.7 16,7.2 9.5,0.7 6.2,4 12.7,10.5 6.2,17 9.5,20.3 16,13.8 22.5,20.3 25.8,17 19.3,10.5" fill="#f72b3e"/>
+                    </svg>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9"
                          class="m-hero--form-input-icon m-hero--form-input-icon-mail">
                         <path d="M31.7,1.9c-0.2-0.6-0.6-1-1.1-1.4C30.1,0.2,29.5,0,28.8,0H3.2C2.7,0,2.3,0.1,1.9,0.3c-0.6,0.2-1,0.6-1.4,1.1
@@ -1367,7 +1369,9 @@
                         <path fill="#35d316"
                               d="M29.4.7c-.8-.8-2.1-.8-2.8 0L11.5 16l-6.1-5.9c-.8-.8-2.1-.7-2.8.1-.8.8-.8 2.1 0 2.8l7.5 7.2c.8.8 2 .7 2.8 0L29.4 3.5c.8-.8.8-2 0-2.8z"/>
                     </svg>
-                    <span class="m-peak--form-input-icon m-peak--form-input-icon-error">&#10006;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9" class="m-peak--form-input-icon m-peak--form-input-icon-error">
+                        <polygon points="25.8,4 22.5,0.7 16,7.2 9.5,0.7 6.2,4 12.7,10.5 6.2,17 9.5,20.3 16,13.8 22.5,20.3 25.8,17 19.3,10.5" fill="#f72b3e"/>
+                    </svg>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 20.9"
                          class="m-peak--form-input-icon m-peak--form-input-icon-mail">
                         <path d="M31.7,1.9c-0.2-0.6-0.6-1-1.1-1.4C30.1,0.2,29.5,0,28.8,0H3.2C2.7,0,2.3,0.1,1.9,0.3c-0.6,0.2-1,0.6-1.4,1.1
@@ -1477,7 +1481,11 @@
       } else {
         animate.parentNode.setAttribute(animate.getAttribute('attributeName'), animate.getAttribute('to'));
       }
-      animate.remove();
+      try {
+        animate.remove();
+      } catch (ignored) {
+        animate.parentNode.removeChild(animate);
+      }
     })
   }
 
@@ -1492,5 +1500,14 @@
   }
 </script>
 <script src="js/main.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-94023928-1', 'auto');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>
