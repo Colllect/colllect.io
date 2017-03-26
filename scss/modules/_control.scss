@@ -17,7 +17,7 @@
 
 .m-control--columns {
     text-align: left;
-    max-width: 1250px;
+    max-width: 1140px;
 
     @include for-tablet-portrait-up {
         display: flex;
@@ -58,7 +58,7 @@
     }
     @include for-desktop-up {
         margin-right: 90px;
-        padding-top: 80px;
+        padding-top: 90px;
         padding-right: 0;
 
         .m-control--block + .m-control--block {
@@ -78,6 +78,10 @@
     }
     @include for-tablet-landscape-up {
         padding: 40px 40px 0;
+        margin: 0 0 0 90px;
+    }
+    @include for-desktop-up {
+        padding: 50px 80px 30px;
         margin: 0 0 0 90px;
     }
 

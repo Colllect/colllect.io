@@ -28,7 +28,7 @@ body {
         content: "";
         display: block;
         position: absolute;
-        top: calc(-#{$body-background-height} + 400px);
+        top: calc(-#{$body-background-height} + 420px);
         left: 0;
         height: $body-background-height;
         width: 100%;
@@ -67,6 +67,13 @@ body {
 
         &::before {
             top: calc(-#{$body-background-height} + 875px);
+        }
+    }
+
+    &.no-animation {
+        &,
+        & * {
+            animation: none !important;
         }
     }
 }

@@ -37,18 +37,18 @@
 }
 
 .m-hero--subtitle {
-    max-width: 220px;
+    max-width: 400px;
     font-size: 16px;
     line-height: 25px;
     margin: 25px 0 30px;
     animation: heroSlideUp 1.85s cubic-bezier(0, 0.69, 0.19, 1);
 
     @include for-tablet-portrait-up {
-        max-width: inherit;
         font-size: 16px;
         margin: 25px 0 35px;
     }
     @include for-desktop-up {
+        max-width: inherit;
         font-size: 14px;
         line-height: 28px;
         margin: 20px 0 35px;
@@ -67,6 +67,12 @@
         display: flex;
         max-width: 530px;
     }
+}
+
+.m-hero--form-sentence {
+    line-height: 25px;
+    margin-bottom: 20px;
+    animation: heroSlideUp 1.9s cubic-bezier(0, 0.69, 0.19, 1);
 }
 
 .m-hero--form-input {
@@ -208,25 +214,25 @@
     animation: shapeUnderSlideIn 1.2s cubic-bezier(0, 0.69, 0.19, 1);
 
     @include for-tablet-portrait-up {
-        top: -45vw;
+        top: -55vw;
         left: 30%;
         width: 100%;
     }
     @include for-tablet-landscape-up {
-        top: -55vw;
+        top: -60vw;
         left: 50%;
     }
     @include for-desktop-up {
-        top: -435px;
+        top: -455px;
         left: 670px;
         width: 900px;
     }
     @include for-mid-desktop-up {
-        top: -430px;
+        top: -450px;
         left: 830px;
     }
     @include for-big-desktop-up {
-        top: -400px;
+        top: -430px;
         left: 920px;
     }
 }
@@ -241,25 +247,24 @@
     @include for-tablet-portrait-up {
         width: calc(100% + 50px);
         margin: 0 0 -335px -25px;
-        transform: translateY(-280px);
-    }
-    @media (min-width: 750px) {
         transform: translateY(-350px);
     }
+    @media (min-width: 750px) {
+        transform: translateY(-400px);
+    }
     @include for-tablet-landscape-up {
-        margin: -420px 0 0 -25px;
+        margin: -440px 0 0 -25px;
         transform: none;
     }
     @include for-desktop-up {
         width: 100%;
-        margin: -470px 100px -335px 0;
-        transform: none;
+        margin: -490px 100px -335px 0;
     }
     @include for-mid-desktop-up {
-        margin-top: -560px;
+        margin-top: -580px;
     }
     @include for-big-desktop-up {
-        margin-top: -600px;
+        margin-top: -620px;
     }
 }
 

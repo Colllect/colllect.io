@@ -2,7 +2,7 @@
     position: relative;
     width: 100%;
     padding: 30px 30px;
-    z-index: 1;
+    z-index: 2;
 
     @include for-tablet-portrait-up {
         padding: 30px 50px;
@@ -34,16 +34,24 @@
     display: block;
     position: absolute;
     top: 27px;
-    right: 50px;
+    right: 30px;
+
+    @include for-tablet-portrait-up {
+        right: 50px;
+    }
 }
 
 .m-header--share-label {
-    display: inline-block;
-    height: 34px;
-    line-height: 30px;
-    color: $regent-gray;
-    vertical-align: top;
-    padding-top: 2px;
+    display: none;
+
+    @include for-tablet-portrait-up {
+        display: inline-block;
+        height: 34px;
+        line-height: 30px;
+        color: $regent-gray;
+        vertical-align: top;
+        padding-top: 2px;
+    }
 }
 
 .m-header--share-button {

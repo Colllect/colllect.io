@@ -31,7 +31,7 @@ each(organiseMenuItems, function (item) {
     });
 
     currentItem.classList.add(activeItemClass);
-    organiseShape.dataset.stateName = currentItem.dataset.stateName;
+    organiseShape.setAttribute('data-state-name', currentItem.getAttribute('data-state-name'));
   })
 });
 
@@ -68,15 +68,15 @@ each(peakFormFields, function (field) {
 // SLIDE IN ON SCROLL
 function slideOnScroll () {
   var elements = document.querySelectorAll('.slide-on-scroll');
-  for (var i = 0; i < elements.length; i += 1) {
-    var elementRect = elements[ i ].getBoundingClientRect();
+  each(elements, function (element) {
+    var elementRect = element.getBoundingClientRect();
 
     if (elementRect.top - window.innerHeight + 200 < 0) {
-      elements[ i ].classList.remove('rewind-slide');
+      element.classList.remove('rewind-slide');
     } else if (elementRect.top - window.innerHeight - 20 > 0) {
-      elements[ i ].classList.add('rewind-slide');
+      element.classList.add('rewind-slide');
     }
-  }
+  })
 }
 
 window.addEventListener('scroll', slideOnScroll);
@@ -87,9 +87,9 @@ slideOnScroll();
 // FORMS
 var formSubitedOk = false;
 
-function onSubmit(e) {
+function onSubmit (e) {
   var form = this,
-    formClass = form.classList[0];
+    formClass = form.classList[ 0 ];
 
   e.preventDefault();
   if (formSubitedOk) {
