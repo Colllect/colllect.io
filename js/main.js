@@ -122,3 +122,29 @@ function onSubmit (e) {
 }
 document.querySelector('.m-hero--form').addEventListener('submit', onSubmit, false);
 document.querySelector('.m-peak--form').addEventListener('submit', onSubmit, false);
+
+/////////////////
+// SVG IE SUPPORT
+function isIE () {
+  var ua = window.navigator.userAgent;
+  return ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0;
+}
+
+function resizeSvg () {
+  each(document.querySelectorAll('svg'), function (svg) {
+    if (svg.getAttribute('height')) {
+      return;
+    }
+    var viewBox = svg.getAttribute('viewBox').split(' ');
+    var viewBoxWidth = viewBox[ 2 ];
+    var viewBoxHeight = viewBox[ 3 ];
+    var computedHeight = parseInt((viewBoxHeight * svg.getBoundingClientRect().width) / viewBoxWidth, 10);
+    if (computedHeight > 0) {
+      svg.style.height = computedHeight + 'px';
+    }
+  });
+}
+if (isIE) {
+  window.addEventListener('resize', resizeSvg);
+  resizeSvg();
+}

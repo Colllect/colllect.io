@@ -4,3 +4,4 @@ css/
 subscribers
 *~$
 *.config
+*.min.js

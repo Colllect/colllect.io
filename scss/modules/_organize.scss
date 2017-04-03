@@ -11,6 +11,9 @@
     @include for-mid-desktop-up {
         margin-top: -60px;
     }
+    @include for-big-desktop-up {
+        margin-top: -40px;
+    }
 }
 
 .m-organise--subtitle,
