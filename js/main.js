@@ -97,6 +97,7 @@ function onSubmit (e) {
   }
 
   form.querySelector('input').disabled = true;
+  form.querySelector('button').disabled = true;
 
   var req = new XMLHttpRequest();
   req.open('POST', 'subscribe.php', true);
@@ -104,15 +105,17 @@ function onSubmit (e) {
     if (req.readyState === 4) {
       if (req.status === 200) {
         formSubitedOk = true;
-        form.querySelector('input').classList.add('submitted');
-        form.querySelector('.' + formClass + '-input-icon-success').style.display = 'block';
+        form.classList.add(formClass + '__submitted');
         form.querySelector('.' + formClass + '-input-icon-error').style.display = 'none';
-        form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'none';
-        form.querySelector('button').disabled = false;
+        form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'block';
+        setTimeout(function () {
+          form.querySelector('button').innerHTML = 'Thanks&nbsp;&nbsp;( :'
+        }, 500);
       } else {
         form.querySelector('.' + formClass + '-input-icon-error').style.display = 'block';
         form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'none';
         form.querySelector('input').disabled = false;
+        form.querySelector('button').disabled = false;
       }
     }
   };

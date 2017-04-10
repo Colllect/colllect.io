@@ -64,6 +64,7 @@
     animation: heroSlideUp 1.9s cubic-bezier(0, 0.69, 0.19, 1);
 
     @include for-desktop-up {
+        position: relative;
         display: flex;
         max-width: 530px;
     }
@@ -91,10 +92,16 @@
         font-family: $font-montserrat;
         color: $regent-gray;
         background: $shark;
-        padding: 0 100px 0 70px;
+        padding: 0 70px;
         border-radius: 60px;
         border: none;
         background: $white;
+
+        @include for-desktop-up {
+            margin-right: 20px;
+            margin-bottom: 0;
+            padding-right: 140px;
+        }
 
         &.m-hero--form-input__filled,
         &:focus {
@@ -161,11 +168,27 @@
 
 .m-hero--form-button {
     width: 100%;
+    transition: transform 500ms;
+    z-index: 4;
 
     @include for-desktop-up {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 0;
         width: auto;
         margin-left: -100px;
-        z-index: 4;
+        transition: min-width 1s;
+    }
+}
+
+.m-hero--form__submitted .m-hero--form-button {
+    transform: translateY(-77px);
+    animation: buttonTextFade 1s;
+
+    @include for-desktop-up {
+        min-width: 100%;
+        transform: none;
     }
 }
 
@@ -301,5 +324,15 @@
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes buttonTextFade {
+    0%,
+    100% {
+        color: $white;
+    }
+    50% {
+        color: transparent;
     }
 }
