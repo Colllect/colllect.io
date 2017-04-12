@@ -92,14 +92,12 @@
         font-family: $font-montserrat;
         color: $regent-gray;
         background: $shark;
-        padding: 0 70px;
+        padding: 0 30px 0 70px;
         border-radius: 60px;
         border: none;
         background: $white;
 
         @include for-desktop-up {
-            margin-right: 20px;
-            margin-bottom: 0;
             padding-right: 140px;
         }
 
@@ -184,7 +182,7 @@
 
 .m-hero--form__submitted .m-hero--form-button {
     transform: translateY(-77px);
-    animation: buttonTextFade 1s;
+    animation: heroButtonTextFade 1s;
 
     @include for-desktop-up {
         min-width: 100%;
@@ -327,7 +325,7 @@
     }
 }
 
-@keyframes buttonTextFade {
+@keyframes heroButtonTextFade {
     0%,
     100% {
         color: $white;

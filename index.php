@@ -1,3 +1,6 @@
+<?php
+$currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +25,7 @@
           content="Inspiration comes in many ways and you like to save everything from the Internet. Collect.io helps you keep your inspiration in the same place from pictures to links, texts and colors."/>
     <meta name="twitter:image" content="http://getcollect.io/logo_share.png"/>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.<?= $currentHash ?>.css">
 </head>
 <body id="todo">
 <div class="page">
@@ -1489,7 +1492,7 @@
     document.body.classList.add('no-animation');
   }
 </script>
-<script src="js/main.min.js"></script>
+<script src="js/main.min.<?= $currentHash ?>.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

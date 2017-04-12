@@ -103,7 +103,7 @@ function onSubmit (e) {
   req.open('POST', 'subscribe.php', true);
   req.onreadystatechange = function () {
     if (req.readyState === 4) {
-      if (req.status === 200) {
+      if (req.status !== 200) {
         formSubitedOk = true;
         form.classList.add(formClass + '__submitted');
         form.querySelector('.' + formClass + '-input-icon-error').style.display = 'none';
