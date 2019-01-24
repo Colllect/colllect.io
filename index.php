@@ -1440,7 +1440,7 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/Collect-io">
+                            <a href="https://github.com/Colllect">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                                      class="m-footer--link-picto">
                                     <path fill="#656776"
