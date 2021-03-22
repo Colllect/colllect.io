@@ -16,6 +16,7 @@
     position: relative;
     width: 130px;
     height: auto;
+    margin-bottom: -20px;
 
     img {
         width: 100%;
@@ -35,6 +36,7 @@
     position: absolute;
     top: 27px;
     right: 30px;
+    transform: translateY(13px);
 
     @include for-tablet-portrait-up {
         right: 50px;

@@ -129,13 +129,13 @@
 
 .m-footer--logo {
     width: 70%;
-    max-width: 200px;
+    max-width: 120px;
     margin-top: 20px;
 
     @include for-desktop-up {
         display: block;
         margin: 0;
-        width: 135px;
+        width: 90px;
     }
 }
 
