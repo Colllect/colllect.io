@@ -1,41 +1,38 @@
-<?php
-$currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="favicon.png"/>
-    <title>Collect.io &ndash; Your visual bookmark manager</title>
+    <title>Colllect &ndash; Your visual bookmark manager</title>
 
-    <meta property="og:title" content="Collect.io &ndash; Your visual bookmark manager">
+    <meta property="og:title" content="Colllect &ndash; Your visual bookmark manager">
     <meta property="og:description"
-          content="Inspiration comes in many ways and you like to save everything from the Internet. Collect.io helps you keep your inspiration in the same place from pictures to links, texts and colors.">
-    <meta property="og:url" content="http://getcollect.io">
+          content="Inspiration comes in many ways and you like to save everything from the Internet. Colllect helps you keep your inspiration in the same place from pictures to links, texts and colors.">
+    <meta property="og:url" content="https://colllect.io">
     <meta property="og:language" content="en_US">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="http://getcollect.io/logo_share.png"/>
+    <meta property="og:image" content="https://colllect.io/logo_share.png"/>
 
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@getcollect"/>
-    <meta name="twitter:title" content="Collect.io &ndash; Your visual bookmark manager"/>
+    <meta name="twitter:title" content="Colllect &ndash; Your visual bookmark manager"/>
     <meta name="twitter:description"
-          content="Inspiration comes in many ways and you like to save everything from the Internet. Collect.io helps you keep your inspiration in the same place from pictures to links, texts and colors."/>
-    <meta name="twitter:image" content="http://getcollect.io/logo_share.png"/>
+          content="Inspiration comes in many ways and you like to save everything from the Internet. Colllect helps you keep your inspiration in the same place from pictures to links, texts and colors."/>
+    <meta name="twitter:image" content="https://colllect.io/logo_share.png"/>
 
-    <link rel="stylesheet" href="css/main.<?= $currentHash ?>.css">
+    <link rel="stylesheet" href="scss/main.scss">
 </head>
-<body id="todo">
+<body>
 <div class="page">
     <header class="m-header">
         <div class="m-header--logo">
-            <img src="images/logo.svg" alt="Collect.io">
+            <img src="images/logo.svg" alt="Colllect">
         </div>
         <div class="m-header--share">
             <div class="m-header--share-label">Share it</div>
-            <a href="https://twitter.com/intent/tweet?text=Check%20out%20Collect.io%20%E2%80%94%20Your%20Open%20Source%20visual%20bookmark%20manager%0a&url=http://getcollect.io&via=getcollectio"
+            <a href="https://twitter.com/intent/tweet?text=Check%20out%20Colllect%20%E2%80%94%20Your%20Open%20Source%20visual%20bookmark%20manager%0a&url=https://colllect.io&via=getcollectio"
                class="m-header--share-button" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-header--share-picto">
                     <path fill="#ffffff"
@@ -43,7 +40,7 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
                           class="st0"/>
                 </svg>
             </a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=http://getcollect.io/" class="m-header--share-button" target="_blank">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://colllect.io/" class="m-header--share-button" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="m-header--share-picto">
                     <path fill="#ffffff" d="M11.8,31.9h6.7V16H23l0.6-5.5h-5.1l0-2.7c0-1.4,0.1-2.2,2.2-2.2h2.8V0.1H19c-5.4,0-7.2,2.7-7.2,7.1v3.3H8.5V16
                         h3.3V31.9z"/>
@@ -721,7 +718,7 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
                 </h2>
                 <p class="m-main--text">
                     Inspiration comes in many ways and you like to save everything from the Internet.
-                    Collect.io helps you keep your inspiration in
+                    Colllect helps you keep your inspiration in
                     the same place from pictures to links, texts&nbsp;and&nbsp;colors.
                 </p>
             </div>
@@ -1214,7 +1211,7 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
                                     <path fill="#F3A0A7"
                                           d="M24.6 26.2l-8 4.9c-1.8 1.1-4 1.1-5.7 0l-8-4.9C1.1 25.1 0 23.1 0 20.9V11c0-2.2 1.1-4.2 2.9-5.3l8-4.9c1.8-1.1 4-1.1 5.7 0l8 4.9c1.8 1.1 2.9 3.1 2.9 5.3v9.9c0 2.2-1.1 4.2-2.9 5.3z"/>
                                 </svg>
-                                Collect.io
+                                Colllect.io
                             </li>
                         </ul>
                     </div>
@@ -1229,7 +1226,7 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
                             Storage
                         </span>
                         <p>
-                            Create an account and plug Collect.io to your storage solution,
+                            Create an account and plug Colllect to your storage solution,
                             you will have a 50MB limitation if you don't use any&nbsp;cloud&nbsp;service.
                         </p>
                         <ul class="m-control--dots">
@@ -1269,7 +1266,7 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
                     <div class="m-control--block">
                         <strong>Flexible</strong>
                         <p>
-                            We wanted Collect.io to be database free. You can change your files to another storage,
+                            We wanted Colllect to be database free. You can change your files to another storage,
                             changing server and still have everything tidy.
                         </p>
                     </div>
@@ -1343,7 +1340,7 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
                             Install Collect <br> on your FTP
                         </strong>
                         <p class="m-install--content">
-                            Download and install an instance of Collect.io on your personal server.
+                            Download and install an instance of Colllect on your personal server.
                             Never lose your files again!
                         </p>
                     </div>
@@ -1395,11 +1392,11 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
         <div class="m-footer--line">
             <div class="m-footer--columns">
                 <div>
-                    <img src="images/logo.svg" alt="Collect.io" class="m-footer--logo">
+                    <img src="images/logo.svg" alt="Colllect" class="m-footer--logo">
                 </div>
-                <div class="m-footer--licence">
+                <div class="m-footer--license">
                     Under the terms of
-                    <a href="https://github.com/Collect-io/Collect.io/blob/develop/LICENSE">MIT license</a>
+                    <a href="https://github.com/Colllect/colllect.io/blob/main/LICENSE">MIT license</a>
                 </div>
             </div>
         </div>
@@ -1492,13 +1489,14 @@ $currentHash = substr(sha1(filemtime(__FILE__)), 0, 7);
     document.body.classList.add('no-animation');
   }
 </script>
-<script src="js/main.min.<?= $currentHash ?>.js"></script>
+<script src="js/main.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('set', 'anonymizeIp', true);
   ga('create', 'UA-94023928-1', 'auto');
   ga('send', 'pageview');
 </script>

@@ -1,0 +1,16 @@
+{
+  "name": "colllect-landing",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.1.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "sass": "^1.32.8"
+  }
+}
