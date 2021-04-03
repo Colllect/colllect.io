@@ -85,14 +85,14 @@ slideOnScroll();
 
 ////////
 // FORMS
-var formSubitedOk = false;
+var isSubmittedFormOk = false;
 
 function onSubmit (e) {
-  var form = this,
-    formClass = form.classList[ 0 ];
+  var form = this;
+  var formClass = form.classList[ 0 ];
 
   e.preventDefault();
-  if (formSubitedOk) {
+  if (isSubmittedFormOk) {
     return;
   }
 
@@ -104,19 +104,23 @@ function onSubmit (e) {
   req.onreadystatechange = function () {
     if (req.readyState === 4) {
       if (req.status !== 200) {
-        formSubitedOk = true;
-        form.classList.add(formClass + '__submitted');
-        form.querySelector('.' + formClass + '-input-icon-error').style.display = 'none';
-        form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'block';
-        setTimeout(function () {
-          form.querySelector('button').innerHTML = 'Thanks&nbsp;&nbsp;( :'
-        }, 500);
-      } else {
         form.querySelector('.' + formClass + '-input-icon-error').style.display = 'block';
         form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'none';
         form.querySelector('input').disabled = false;
         form.querySelector('button').disabled = false;
+        return;
       }
+
+      isSubmittedFormOk = true;
+      document.querySelector('.m-hero--form').classList.add('m-hero--form__submitted');
+      document.querySelector('.m-peak--form').classList.add('m-peak--form__submitted');
+      form.querySelector('.' + formClass + '-input-icon-error').style.display = 'none';
+      form.querySelector('.' + formClass + '-input-icon-mail').style.display = 'block';
+      setTimeout(function () {
+        var successButtonContent = 'Thanks&nbsp;&nbsp;:&nbsp;)';
+        document.querySelector('.m-hero--form button').innerHTML = successButtonContent;
+        document.querySelector('.m-peak--form button').innerHTML = successButtonContent;
+      }, 500);
     }
   };
   var formData = new FormData(form);

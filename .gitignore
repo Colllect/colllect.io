@@ -5,3 +5,4 @@ subscribers
 *~$
 *.config
 *.min.js
+.env.php

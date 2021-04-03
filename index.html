@@ -76,7 +76,7 @@
             <p class="m-hero--form-sentence">
                 Be notified of the launch by entering your email
             </p>
-            <form class="m-hero--form">
+            <form class="m-hero--form" action="/subscribe.php" method="post">
                 <div class="m-hero--form-input m-hero--form-input-email">
                     <input type="email" id="hero-email" name="email" required>
                     <label for="hero-email">Email</label>
@@ -1355,7 +1355,7 @@
             <p class="m-peak--text">
                 Enter you email address to be notified of the launch
             </p>
-            <form class="m-peak--form">
+            <form class="m-peak--form" action="/subscribe.php" method="post">
                 <div class="m-peak--form-input m-peak--form-input-email">
                     <input type="email" id="peak-email" name="email" required>
                     <label for="peak-email">Email</label>
@@ -1393,10 +1393,6 @@
             <div class="m-footer--columns">
                 <div>
                     <img src="images/logo.svg" alt="Colllect" class="m-footer--logo">
-                </div>
-                <div class="m-footer--license">
-                    Under the terms of
-                    <a href="https://github.com/Colllect/colllect.io/blob/main/LICENSE">MIT license</a>
                 </div>
             </div>
         </div>
